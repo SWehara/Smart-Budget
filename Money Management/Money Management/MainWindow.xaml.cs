@@ -8,7 +8,7 @@ namespace YourNamespace
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); // Ensure this is present
         }
 
         private void UploadButton_Click(object sender, RoutedEventArgs e)
@@ -27,9 +27,13 @@ namespace YourNamespace
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
             string userName = NameTextBox.Text;
-            if (!string.IsNullOrEmpty(userName))
+            if (!string.IsNullOrWhiteSpace(userName))
             {
-                MessageBox.Show($"Welcome, {userName}!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                // Open the Dashboard Window
+                DashboardWindow dashboardWindow = new DashboardWindow();
+                dashboardWindow.Show(); // Show the new window
+
+                this.Close(); // Close the current window (optional)
             }
             else
             {
