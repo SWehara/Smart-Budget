@@ -1,0 +1,19 @@
+﻿<Window x:Class="YourNamespace.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Your Money Management App" Height="350" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Profile Picture -->
+            <Image x:Name="ProfileImage" Width="100" Height="100" Margin="0,0,0,20" Source="/Assets/default_profile.png" />
+            <Button x:Name="UploadButton" Content="Upload Profile Picture" Click="UploadButton_Click" Margin="0,0,0,20" />
+
+            <!-- Name Input -->
+            <TextBlock Text="Enter name:" Margin="0,0,0,5" />
+            <TextBox x:Name="NameTextBox" Width="200" Margin="0,0,0,20" />
+
+            <!-- Proceed Button -->
+            <Button x:Name="ProceedButton" Content="Proceed" Click="ProceedButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

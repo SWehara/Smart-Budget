@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|d:\\downloads\\project file\\application-development-ca1-swehara\\money management\\money management\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|d:\\downloads\\project file\\application-development-ca1-swehara\\money management\\money management\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Money Management\\MainWindow.xaml",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\MainWindow.xaml",
+              "RelativeToolTip": "Money Management\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-05T12:22:46.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T12:22:45.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
