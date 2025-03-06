@@ -18,36 +18,50 @@
             </Grid.ColumnDefinitions>
 
             <!-- Income -->
-            <Border Background="White" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="0">
+            <Border Background="Gray" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="0">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBlock Text="Income" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
-                    <TextBlock Text="$5000" FontSize="16" />
+                   
                 </StackPanel>
             </Border>
 
             <!-- Expenses -->
-            <Border Background="White" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="1">
+            <Border Background="Gray" CornerRadius="10" Margin="10" Grid.Row="0" Grid.Column="1">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBlock Text="Expenses" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
-                    <TextBlock Text="$2000" FontSize="16" />
+                    
                 </StackPanel>
             </Border>
 
             <!-- Balance -->
-            <Border Background="White" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="0">
+            <Border Background="Gray" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="0">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBlock Text="Balance" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
-                    <TextBlock Text="$3000" FontSize="16" />
+                    
                 </StackPanel>
             </Border>
 
             <!-- Goals -->
-            <Border Background="White" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="1">
+            <Border Background="Gray" CornerRadius="10" Margin="10" Grid.Row="1" Grid.Column="1">
                 <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBlock Text="Goals" FontSize="18" FontWeight="Bold" Margin="0,0,0,10" />
-                    <TextBlock Text="Save $1000" FontSize="16" />
+                    
                 </StackPanel>
             </Border>
+        </Grid>
+        <Grid>
+            <!-- Left Corner -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20">
+                <Button x:Name="SettingsButton" Content="Settings" Click="SettingsButton_Click"/>
+                <Button Content="Help" Width="100" Click="HelpButton_Click"/>
+            </StackPanel>
+
+            <!-- Right Upper Corner -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20">
+                <Button Content="Bill Reminders" Width="120" Margin="0,0,10,0" Click="BillRemindersButton_Click"/>
+                <Button Content="Weekly Report" Width="120" Margin="0,0,10,0" Click="WeeklyReportButton_Click"/>
+                <Button Content="Profile Details" Width="120" Click="ProfileDetailsButton_Click"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

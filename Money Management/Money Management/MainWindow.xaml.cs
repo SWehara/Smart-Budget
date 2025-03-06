@@ -1,5 +1,7 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace YourNamespace
@@ -38,6 +40,7 @@ namespace YourNamespace
             else
             {
                 MessageBox.Show("Please enter your name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
     }
