@@ -1,0 +1,12 @@
+﻿<Window x:Class="Money_Management.BalanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Balance Window" Height="450" Width="800">
+    <Grid>
+        <!-- Add your UI elements here -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Balance Management" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <Button x:Name="CloseButton" Content="Close" Width="100" Height="30" Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

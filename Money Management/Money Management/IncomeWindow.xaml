@@ -1,0 +1,6 @@
+﻿<Window x:Class="Money_Management.IncomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IncomeWindow" Height="450" Width="800">
+    <!-- Your XAML content here -->
+</Window>

@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
-namespace YourNamespace
+namespace Money_Management
 {
     public partial class MainWindow : Window
     {
@@ -31,11 +31,11 @@ namespace YourNamespace
             string userName = NameTextBox.Text;
             if (!string.IsNullOrWhiteSpace(userName))
             {
-                // Open the Dashboard Window
+                
                 DashboardWindow dashboardWindow = new DashboardWindow();
-                dashboardWindow.Show(); // Show the new window
+                dashboardWindow.Show(); 
 
-                this.Close(); // Close the current window (optional)
+                this.Close();
             }
             else
             {
