@@ -4,9 +4,11 @@
         Title="Dashboard" Height="400" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
-            <Button Content="Income" Width="100" Height="30" Margin="0,5,0,5"/>
+            <!-- Add Click event handler to the Income button -->
+            <Button Content="Income" Width="100" Height="30" Margin="0,5,0,5" Click="IncomeButton_Click"/>
             <Button Content="Expenses" Width="100" Height="30" Margin="0,5,0,5"/>
+            <Button Content="Balance" Width="100" Height="30" Margin="0,5,0,5"/>
+            <Button Content="Goals" Width="100" Height="30" Margin="0,5,0,5"/>
         </StackPanel>
     </Grid>
 </Window>
-

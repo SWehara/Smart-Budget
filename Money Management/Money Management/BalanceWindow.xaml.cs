@@ -23,5 +23,11 @@ namespace Money_Management
         {
             InitializeComponent();
         }
+
+        // Add this event handler to handle the CloseButton click
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); // Close the window
+        }
     }
 }

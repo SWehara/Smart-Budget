@@ -22,3 +22,4 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\GoalsWindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\BalanceWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\ExpensesWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\GoalsWindow.baml
