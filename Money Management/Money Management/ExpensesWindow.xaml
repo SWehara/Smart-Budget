@@ -6,7 +6,7 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Expenses Management" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
-            <!-- TextBox with Placeholder -->
+            
             <TextBox x:Name="ExpenseNameTextBox" Width="200" Height="30" Text="Enter Expense Name" Foreground="Gray" Margin="0,0,0,10"
                      GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
 

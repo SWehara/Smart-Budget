@@ -15,11 +15,6 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Dashboardwindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Dashboardwindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\IncomeWindow.g.cs
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Management_MarkupCompile.lref
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\IncomeWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\ExpensesWindow.g.cs
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\BalanceWindow.g.cs
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\GoalsWindow.g.cs
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\BalanceWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\ExpensesWindow.baml
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\GoalsWindow.baml

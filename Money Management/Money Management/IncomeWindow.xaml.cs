@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -8,7 +7,6 @@ namespace Money_Management
 {
     public partial class IncomeWindow : Window
     {
-        // List to store income amounts
         private List<double> incomeList = new List<double>();
 
         public IncomeWindow()
@@ -16,29 +14,19 @@ namespace Money_Management
             InitializeComponent();
         }
 
-        // Event handler for the "Add Income" button
         private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            // Validate input
             if (string.IsNullOrEmpty(IncomeSourceTextBox.Text) || string.IsNullOrEmpty(IncomeAmountTextBox.Text))
             {
                 MessageBox.Show("Please enter both income source and amount.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            // Try to parse the income amount
             if (double.TryParse(IncomeAmountTextBox.Text, out double incomeAmount))
             {
-                // Add the income amount to the list
                 incomeList.Add(incomeAmount);
-
-                // Calculate the total income
                 double totalIncome = CalculateTotalIncome();
-
-                // Update the total income display
                 TotalIncomeTextBlock.Text = $"Total Income: {totalIncome:N2}";
-
-                // Clear the input fields
                 IncomeSourceTextBox.Clear();
                 IncomeAmountTextBox.Clear();
             }
@@ -48,7 +36,6 @@ namespace Money_Management
             }
         }
 
-        // Method to calculate the total income
         private double CalculateTotalIncome()
         {
             double total = 0;
@@ -57,6 +44,13 @@ namespace Money_Management
                 total += amount;
             }
             return total;
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            DashboardWindow dashboardWindow = new DashboardWindow();
+            dashboardWindow.Show();
+            this.Close();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Money_Management
     {
         public MainWindow()
         {
-            InitializeComponent(); // Ensure this is present
+            InitializeComponent(); 
         }
 
         private void UploadButton_Click(object sender, RoutedEventArgs e)

@@ -9,16 +9,28 @@ namespace Money_Management
             InitializeComponent();
         }
 
-        // Add this method to handle the Income button click
+        
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            // Create an instance of the IncomeWindow
+            
             IncomeWindow incomeWindow = new IncomeWindow();
 
-            // Show the IncomeWindow
+            
             incomeWindow.Show();
 
-            // Optionally, close the DashboardWindow (if needed)
+            
+            this.Close();
+        }
+
+        private void ExpensesButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            ExpensesWindow expensesWindow = new ExpensesWindow();
+
+            
+            expensesWindow.Show();
+
+            
             this.Close();
         }
     }
