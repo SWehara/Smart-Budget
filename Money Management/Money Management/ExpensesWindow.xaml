@@ -2,8 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Expenses Window" Height="450" Width="800">
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+    <Grid Background="#FF5C5F63">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="White">
             <TextBlock Text="Expenses Management" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
             

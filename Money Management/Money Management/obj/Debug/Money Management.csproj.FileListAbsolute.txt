@@ -2,8 +2,6 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\Money Management.exe
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\Money Management.pdb
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Management.csproj.AssemblyReference.cache
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\MainWindow.baml
-D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\MainWindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\App.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Management_MarkupCompile.cache
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Management.g.resources
@@ -18,3 +16,5 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\IncomeWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\ExpensesWindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\ExpensesWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\MainWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\MainWindow.g.cs
