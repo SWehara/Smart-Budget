@@ -1,8 +1,4 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
 
 namespace Money_Management.Views
 {
@@ -13,23 +9,27 @@ namespace Money_Management.Views
             InitializeComponent();
         }
 
+        // Income Button Click: Open the IncomeWindow and hide the DashboardWindow
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            IncomeWindow incomeWindow = new IncomeWindow();
+            IncomeWindow incomeWindow = new IncomeWindow(this);
             incomeWindow.Show();
+            this.Hide();
         }
 
+        // Expenses Button Click: Open ExpensesWindow (ensure ExpensesWindow is implemented)
         private void ExpensesButton_Click(object sender, RoutedEventArgs e)
         {
             ExpensesWindow expensesWindow = new ExpensesWindow();
             expensesWindow.Show();
         }
 
+        // Profile Image Click: Open the Profile Window and close the DashboardWindow
         private void ProfileImage_Click(object sender, RoutedEventArgs e)
         {
-            Profilewindow profileWindow = new Profilewindow(); // Replace with actual Profile window class
-            profileWindow.Show(); // Open Profile window
-            this.Close(); // Close the current window (Dashboard window)
+            Profilewindow profileWindow = new Profilewindow();
+            profileWindow.Show();
+            this.Close();
         }
     }
 }

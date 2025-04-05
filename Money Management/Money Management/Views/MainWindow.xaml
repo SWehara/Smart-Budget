@@ -1,46 +1,43 @@
 ﻿<Window x:Class="Money_Management.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Your Money Management App" Height="350" Width="400">
-    <Grid Background="Gray">
+        Title="Your Money Management App" Height="400" Width="700" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Views/240_F_1094581832_Z3eZY6JP2eF5N1eSB4WYDpfaxqtc3bmH.jpg"/>
+        </Grid.Background>
+        <!-- Define grid with rows for name and user interaction -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- For the name at the top -->
+            <RowDefinition Height="*"/>
+            <!-- For the center content -->
+        </Grid.RowDefinitions>
 
-        <Grid>
-            <Grid.Background>
-                <ImageBrush ImageSource="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\Mainwindow.jpg"/>
-            </Grid.Background>
+        <!-- Name at the top of the page -->
+        <TextBlock Grid.Row="0" Text="Your Money Management App" FontSize="50" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,20,10,20"/>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+        <!-- Center panel with user interaction (Upload, Name, Password, Proceed) -->
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250">
+            <!-- Uploaded profile image -->
+            <Border Width="100" Height="100" CornerRadius="50" Background="White" Margin="0,0,1,10">
+                <Image x:Name="UserProfileImage1" Stretch="UniformToFill" Visibility="Collapsed"/>
+            </Border>
 
-                <RowDefinition Height="*" />
+            <!-- Upload Button -->
+            <Button x:Name="UploadButton1" Content="Upload Profile Picture" Click="UploadButton_Click"
+                Width="180" Height="30" Background="Black" Foreground="White" Margin="0,0,0,20" HorizontalAlignment="Center"/>
 
-                <RowDefinition Height="Auto" />
+            <TextBlock Text="Enter name:" Foreground="White" Margin="0,0,0,5" HorizontalAlignment="Center"/>
+            <TextBox x:Name="NameTextBox1" Width="220" Height="30" HorizontalAlignment="Center"/>
 
-            </Grid.RowDefinitions>
+            <!-- Password -->
+            <TextBlock Text="Enter password:" Foreground="White" Margin="10,15,0,5" HorizontalAlignment="Center"/>
+            <PasswordBox x:Name="PasswordBox1" Width="220" Height="30" HorizontalAlignment="Center"/>
 
-
-            <TextBlock Text="Your Money Management App" FontSize="60" FontWeight="Bold" Foreground="Black" 
-                       HorizontalAlignment="Center" Margin="0,20,0,20" Grid.Row="0" />
-
-
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Height="234" Width="244" Margin="0,72,0,0" Grid.RowSpan="2" Grid.Row="1">
-                <Border Width="100" Height="100" >
-
-                    <Border>
-
-                        <Image x:Name="ProfileImage"  />
-                    </Border>
-                </Border>
-                <Button x:Name="UploadButton" Content="Upload Profile Picture" Click="UploadButton_Click" Width="154" RenderTransformOrigin="0.495,-1.501" Height="26" />
-
-
-                <TextBlock Text="Enter your name:" Foreground="Black" Margin="0,25,0,5" />
-                <TextBox x:Name="NameTextBox" Width="201" Height="25" />
-            </StackPanel>
-
-
-            <Button x:Name="ProceedButton" Content="Proceed" Click="ProceedButton_Click" 
-                    HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="20,70,10,10" Width="110" Grid.Row="1" Height="30" Grid.RowSpan="2" Background="DarkGray" BorderThickness="5" BorderBrush="Black"/>
-        </Grid>
+            <!-- Proceed -->
+            <Button x:Name="ProceedButton1" Content="Proceed" Click="ProceedButton_Click"
+                Width="120" Height="35" Margin="0,25,0,0" Background="DarkGray" Foreground="Black" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </Window>

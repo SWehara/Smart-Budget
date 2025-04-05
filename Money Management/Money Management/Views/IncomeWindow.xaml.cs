@@ -1,66 +1,48 @@
-﻿using Money_Management.Views;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Windows;
 
 namespace Money_Management.Views
 {
     public partial class IncomeWindow : Window
     {
-        private List<double> incomeList = new List<double>();
+        // Store the reference to the DashboardWindow
+        private DashboardWindow dashboardWindow;
 
-        public IncomeWindow()
+        // Updated constructor to accept a DashboardWindow instance
+        public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
+            this.dashboardWindow = dashboardWindow;
         }
 
-        private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Check if the income source and amount are provided
-            if (string.IsNullOrEmpty(IncomeSourceTextBox.Text) || string.IsNullOrEmpty(IncomeAmountTextBox.Text))
-            {
-                MessageBox.Show("Please enter both income source and amount.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            // Try parsing the income amount
-            if (double.TryParse(IncomeAmountTextBox.Text, out double incomeAmount))
-            {
-                // Add the income amount to the list
-                incomeList.Add(incomeAmount);
-
-                // Calculate the total income and update the TextBlock
-                double totalIncome = CalculateTotalIncome();
-                TotalIncomeTextBlock.Text = $"Total Income: Rs.{totalIncome:N2}";
-
-                // Clear the input fields
-                IncomeSourceTextBox.Clear();
-                IncomeAmountTextBox.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Please enter a valid income amount.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-
-        // Method to calculate the total income
-        private double CalculateTotalIncome()
-        {
-            double total = 0;
-            foreach (double amount in incomeList)
-            {
-                total += amount;
-            }
-            return total;
-        }
-
-        // Home button click handler to navigate to Dashboard
+        // Home Button Click: Return to the DashboardWindow
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            DashboardWindow dashboardWindow = new DashboardWindow();
+            // Show the dashboard window and close the IncomeWindow
             dashboardWindow.Show();
             this.Close();
         }
+
+        // Add Income Button Click: Update the total income display
+        private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Example implementation to update the total income text block
+            int income;
+            if (int.TryParse(IncomeAmountTextBox.Text, out income))
+            {
+                // Parse the current total income from the text block (assumes "Total Income: Rs.0" format)
+                int currentIncome = 0;
+                string totalText = TotalIncomeTextBlock.Text.Replace("Total Income: Rs.", "").Trim();
+                int.TryParse(totalText, out currentIncome);
+
+                // Update total income
+                currentIncome += income;
+                TotalIncomeTextBlock.Text = $"Total Income: Rs.{currentIncome}";
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid income amount.", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
     }
 }
-

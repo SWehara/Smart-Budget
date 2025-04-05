@@ -1,7 +1,6 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Windows;
-using System.Windows.Media.Imaging;
+using Microsoft.Win32;  // For file dialog
 
 namespace Money_Management.Views
 {
@@ -12,44 +11,43 @@ namespace Money_Management.Views
             InitializeComponent();
         }
 
+        // Event handler for the Upload button
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
+            // Open file dialog to select an image
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg|All files (*.*)|*.*"
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
             };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                try
-                {
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(openFileDialog.FileName);
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmap.EndInit();
-                    ProfileImage.Source = bitmap;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Failed to load image: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                // Set the image source to the selected file
+                UserProfileImage1.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(openFileDialog.FileName));
+                UserProfileImage1.Visibility = Visibility.Visible; // Show the image
+                UploadButton1.Content = "Change Profile Picture"; // Change button text after image is uploaded
             }
         }
 
+        // Event handler for the Proceed button
         private void ProceedButton_Click(object sender, RoutedEventArgs e)
         {
-            string userName = NameTextBox.Text;
-            if (!string.IsNullOrWhiteSpace(userName))
+            // Basic validation for name and password
+            string name = NameTextBox1.Text;
+            string password = PasswordBox1.Password;
+
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))
             {
-                DashboardWindow dashboardWindow = new DashboardWindow();
-                dashboardWindow.Show();
-                this.Close();
+                MessageBox.Show("Please enter both name and password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-            else
-            {
-                MessageBox.Show("Please enter your name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+
+            // Open the Dashboard Window
+            DashboardWindow dashboardWindow = new DashboardWindow();
+            dashboardWindow.Show();  // Open the Dashboard Window
+
+            this.Close();  // Close the MainWindow (to not keep the user on the initial window)
         }
     }
 }
+
