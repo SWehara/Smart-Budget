@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Money_Management
+namespace Money_Management.Views
 {
     public partial class ExpensesWindow : Window
     {

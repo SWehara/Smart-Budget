@@ -55,21 +55,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ExpensesWindow.xaml.cs">
+    <Compile Include="Views\ExpensesWindow.xaml.cs">
       <DependentUpon>ExpensesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="IncomeWindow.xaml.cs">
+    <Compile Include="Views\IncomeWindow.xaml.cs">
       <DependentUpon>IncomeWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dashboardwindow.xaml">
+    <Page Include="Views\Dashboardwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ExpensesWindow.xaml">
+    <Page Include="Views\ExpensesWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Profilewindow.xaml">
+    <Page Include="Views\Profilewindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -81,17 +81,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Dashboardwindow.xaml.cs">
+    <Compile Include="Views\Dashboardwindow.xaml.cs">
       <DependentUpon>Dashboardwindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Profilewindow.xaml.cs">
+    <Compile Include="Views\Profilewindow.xaml.cs">
       <DependentUpon>Profilewindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="IncomeWindow.xaml">
+    <Page Include="Views\IncomeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,7 +132,7 @@
     <Resource Include="Images\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\profile.jpg" />
+    <Resource Include="Images\profile..png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
