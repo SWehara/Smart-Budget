@@ -69,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Profilewindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,6 +83,9 @@
     </Compile>
     <Compile Include="Dashboardwindow.xaml.cs">
       <DependentUpon>Dashboardwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Profilewindow.xaml.cs">
+      <DependentUpon>Profilewindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -116,16 +123,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\istockphoto-503589364-612x612.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\pic 2.jpg" />
+    <Resource Include="Images\Mainwindow.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\dashboard window.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\profile.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

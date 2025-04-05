@@ -4,7 +4,7 @@
         Title="Dashboard" Height="700" Width="1000">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Images/icon.png"/>
+            <ImageBrush ImageSource="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\icon.png"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -17,32 +17,44 @@
 
         <!-- Sidebar -->
         <StackPanel Grid.Row="1" Grid.Column="0" Background="DarkGray" Width="220" VerticalAlignment="Stretch">
-            <Image Source="/Images/app_icon.png" Width="60" Height="60" Margin="10" HorizontalAlignment="Center"/>
-            <Button Content="Income" Width="200" Height="50" Margin="10" Click="IncomeButton_Click" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
-            <Button Content="Expenses" Width="200" Height="50" Margin="10" Click="ExpensesButton_Click" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
-            <Button Content="Balance" Width="200" Height="50" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
-            <Button Content="Goals" Width="200" Height="50" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
-            <Separator Height="20"/>
-            <Button Content="Settings" Width="200" Height="50" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
-            <Button Content="Help" Width="200" Height="50" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="16"/>
+            <!-- App Icon Grid -->
+            <Grid Background="DarkGray" Height="90">
+                <Image Source="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\icon.png" Width="60" Height="60" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Navigation Buttons -->
+            <Button Content="Income" Width="200" Height="50" Margin="10,5" Click="IncomeButton_Click" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Expenses" Width="200" Height="50" Margin="10,5" Click="ExpensesButton_Click" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Balance" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Goals" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+
+            <Separator Height="40"/>
+
+            <!-- Settings and Help Buttons Placed Lower -->
+            <StackPanel VerticalAlignment="Bottom">
+                <Button Content="Settings" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+                <Button Content="Help" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            </StackPanel>
         </StackPanel>
 
         <!-- Top Bar -->
-        <Grid Grid.Row="0" Grid.Column="1" Background="Gray" Height="70">
+        <Grid Grid.Row="0" Grid.Column="1" Background="LightGray" Height="70">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="140"/>
                 <ColumnDefinition Width="140"/>
                 <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Bill Reminders" Grid.Column="1" Width="130" Height="40" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="14"/>
-            <Button Content="Weekly Report" Grid.Column="2" Width="130" Height="40" Margin="10" Background="Transparent" BorderThickness="0" Foreground="Black" FontSize="14"/>
-            <Image Grid.Column="3" Width="40" Height="40" Source="/Images/profile.png" Margin="10"/>
+
+            <Button Content="Bill Reminders" Grid.Column="1" Width="130" Height="40" Margin="10" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="DarkGray" Foreground="Black" FontSize="14"/>
+            <Button Content="Weekly Report" Grid.Column="2" Width="130" Height="40" Margin="10" Background="Transparent" BorderThickness="1,1,1,1" BorderBrush="DarkGray" Foreground="Black" FontSize="14"/>
+            <Image Grid.Column="3" Width="40" Height="40" Source="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\profile.jpg" Margin="10" MouseLeftButtonDown="ProfileImage_Click"/>
         </Grid>
 
         <!-- Main Content -->
         <Grid Grid.Row="1" Grid.Column="1">
-            <Image Source="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\dashboard window.jpeg" Stretch="Fill"/>
+            <Image Source="/Images/dashboard window.jpeg" Stretch="Fill"/>
         </Grid>
     </Grid>
 </Window>

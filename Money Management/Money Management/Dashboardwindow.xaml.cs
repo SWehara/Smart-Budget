@@ -24,5 +24,12 @@ namespace Money_Management
             ExpensesWindow expensesWindow = new ExpensesWindow();
             expensesWindow.Show();
         }
+
+        private void ProfileImage_Click(object sender, RoutedEventArgs e)
+        {
+            Profilewindow profileWindow = new Profilewindow(); // Replace with actual Profile window class
+            profileWindow.Show(); // Open Profile window
+            this.Close(); // Close the current window (Dashboard window)
+        }
     }
 }

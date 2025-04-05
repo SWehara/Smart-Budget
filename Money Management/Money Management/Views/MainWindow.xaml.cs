@@ -1,7 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace Money_Management
@@ -10,7 +9,7 @@ namespace Money_Management
     {
         public MainWindow()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void UploadButton_Click(object sender, RoutedEventArgs e)
@@ -22,7 +21,19 @@ namespace Money_Management
 
             if (openFileDialog.ShowDialog() == true)
             {
-                ProfileImage.Source = new BitmapImage(new System.Uri(openFileDialog.FileName));
+                try
+                {
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(openFileDialog.FileName);
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmap.EndInit();
+                    ProfileImage.Source = bitmap;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to load image: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
@@ -31,16 +42,13 @@ namespace Money_Management
             string userName = NameTextBox.Text;
             if (!string.IsNullOrWhiteSpace(userName))
             {
-                
                 DashboardWindow dashboardWindow = new DashboardWindow();
-                dashboardWindow.Show(); 
-
+                dashboardWindow.Show();
                 this.Close();
             }
             else
             {
                 MessageBox.Show("Please enter your name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-
             }
         }
     }

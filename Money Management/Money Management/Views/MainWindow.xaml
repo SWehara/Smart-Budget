@@ -6,7 +6,7 @@
 
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/Images/istockphoto-503589364-612x612.jpg"/>
+                <ImageBrush ImageSource="D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\Images\Mainwindow.jpg"/>
             </Grid.Background>
 
             <Grid.RowDefinitions>
