@@ -1,9 +1,9 @@
 ﻿<Window x:Class="Money_Management.ExpensesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Expenses Window" Height="450" Width="800">
-    <Grid Background="#FF5C5F63">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="White">
+        Title="Expenses Window" Height="450" Width="800" Background="Gray">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="Gray" Width="500" Height="300">
             <TextBlock Text="Expenses Management" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
 
             
