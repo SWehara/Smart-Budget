@@ -5,44 +5,61 @@ namespace Money_Management.Views
 {
     public partial class IncomeWindow : Window
     {
-        // Store the reference to the DashboardWindow
         private DashboardWindow dashboardWindow;
+        private decimal totalIncome = 0;
 
-        // Updated constructor to accept a DashboardWindow instance
         public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
             this.dashboardWindow = dashboardWindow;
+            IncomeDatePicker.SelectedDate = DateTime.Now;
         }
 
-        // Home Button Click: Return to the DashboardWindow
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            // Show the dashboard window and close the IncomeWindow
             dashboardWindow.Show();
             this.Close();
         }
 
-        // Add Income Button Click: Update the total income display
         private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            // Example implementation to update the total income text block
-            int income;
-            if (int.TryParse(IncomeAmountTextBox.Text, out income))
-            {
-                // Parse the current total income from the text block (assumes "Total Income: Rs.0" format)
-                int currentIncome = 0;
-                string totalText = TotalIncomeTextBlock.Text.Replace("Total Income: Rs.", "").Trim();
-                int.TryParse(totalText, out currentIncome);
+            string source = IncomeSourceTextBox.Text.Trim();
+            string amountText = IncomeAmountTextBox.Text.Trim();
+            DateTime? date = IncomeDatePicker.SelectedDate;
 
-                // Update total income
-                currentIncome += income;
-                TotalIncomeTextBlock.Text = $"Total Income: Rs.{currentIncome}";
+            // Validate income source
+            if (string.IsNullOrWhiteSpace(source))
+            {
+                MessageBox.Show("Please enter an income source.", "Missing Info", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
-            else
+
+            // Validate income amount
+            if (!decimal.TryParse(amountText, out decimal amount) || amount <= 0)
             {
                 MessageBox.Show("Please enter a valid income amount.", "Invalid Input", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
             }
+
+            // Validate date
+            if (date == null)
+            {
+                MessageBox.Show("Please select a valid date.", "Missing Date", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Add to the ListBox
+            IncomeListBox.Items.Add($"{date.Value.ToShortDateString()} - {source} - Rs.{amount}");
+
+            // Update the total income
+            totalIncome += amount;
+            TotalIncomeTextBlock.Text = $"Total Income: Rs.{totalIncome}";
+
+            // Clear the input fields
+            IncomeSourceTextBox.Clear();
+            IncomeAmountTextBox.Clear();
+            IncomeDatePicker.SelectedDate = DateTime.Now;
         }
     }
 }
+

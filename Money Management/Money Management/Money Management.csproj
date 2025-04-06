@@ -138,9 +138,6 @@
     <Resource Include="Views\download.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\240_F_1063691036_roW6cxeZZyTsEEGZQDY4Dm59DVIDtndY.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Views\240_F_1094581832_Z3eZY6JP2eF5N1eSB4WYDpfaxqtc3bmH.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
