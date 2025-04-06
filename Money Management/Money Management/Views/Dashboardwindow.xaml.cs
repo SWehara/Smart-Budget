@@ -12,7 +12,7 @@ namespace Money_Management.Views
         // Income Button Click: Open the IncomeWindow and hide the DashboardWindow
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            IncomeWindow incomeWindow = new IncomeWindow(this);
+            IncomeWindow incomeWindow = new IncomeWindow(this); // Pass the current DashboardWindow instance to IncomeWindow
             incomeWindow.Show();
             this.Hide();
         }
