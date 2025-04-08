@@ -10,34 +10,27 @@
                 HorizontalAlignment="Left" VerticalAlignment="Top" 
                 Margin="10,10,0,0" Click="BackButton_Click"/>
 
-        <!-- Styled container for the form -->
-        <Border Background="White" CornerRadius="10" Padding="20"
-                HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
-
-            <StackPanel>
-                <!-- Search Bar -->
-                <TextBox x:Name="SearchTextBox" FontSize="14" Width="300" Height="25" Margin="0,0,0,10" 
-                         TextChanged="SearchTextBox_TextChanged" GotFocus="SearchTextBox_GotFocus" 
-                         LostFocus="SearchTextBox_LostFocus" />
-
-                <TextBlock Text="Income Source:" FontSize="16" Margin="0,0,0,5"/>
+        
+        <StackPanel>
+                
+                <TextBlock Text="Income Source:" FontSize="16" Margin="500,100,0,5"/>
                 <TextBox x:Name="IncomeSourceTextBox" FontSize="14" Margin="0,0,0,10" Height="25" Width="300"/>
 
-                <TextBlock Text="Income Amount:" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock Text="Income Amount:" FontSize="16" Margin="500,0,0,5"/>
                 <TextBox x:Name="IncomeAmountTextBox" FontSize="14" Margin="0,0,0,10" Height="25" Width="300"/>
 
-                <TextBlock Text="Date:" FontSize="16" Margin="0,0,0,5"/>
+                <TextBlock Text="Date:" FontSize="16" Margin="500,0,0,5"/>
                 <DatePicker x:Name="IncomeDatePicker" SelectedDate="{x:Static sys:DateTime.Now}" 
                             Margin="0,0,0,10" Width="300"/>
 
                 <Button x:Name="AddIncomeButton" Content="Add Income" Width="120" Height="30" 
-                        FontSize="14" Margin="0,0,0,10" Click="AddIncomeButton_Click"/>
+                        FontSize="14" Margin="0,20,0,10" Click="AddIncomeButton_Click"/>
 
                 <TextBlock x:Name="TotalIncomeTextBlock" Text="Total Income: Rs.0" 
-                           FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+                           FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,30,0,10"/>
 
                 <!-- DataGrid for displaying the table -->
-                <DataGrid x:Name="IncomeDataGrid" Height="150" Width="440" Margin="0,10,0,0" AutoGenerateColumns="False">
+                <DataGrid x:Name="IncomeDataGrid" Height="150" Width="440" Margin="0,45,0,0" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="120"/>
                         <DataGridTextColumn Header="Source" Binding="{Binding Source}" Width="200"/>
@@ -51,7 +44,7 @@
                     <Button x:Name="DeleteButton" Content="Delete" Width="80" Height="30" Click="DeleteButton_Click"/>
                 </StackPanel>
             </StackPanel>
-        </Border>
+       
     </Grid>
 </Window>
 

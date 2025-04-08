@@ -31,14 +31,7 @@ namespace Money_Management.Views
             IncomeDataGrid.ItemsSource = IncomeEntries;
         }
 
-        // Search functionality: Filter based on Source or Amount
-        private void SearchTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            string searchText = SearchTextBox.Text.ToLower();
-            var filteredEntries = IncomeEntries.Where(entry =>
-                entry.Source.ToLower().Contains(searchText) || entry.Amount.ToString().Contains(searchText)).ToList();
-            IncomeDataGrid.ItemsSource = new ObservableCollection<IncomeEntry>(filteredEntries);
-        }
+
 
         // Add income (example)
         private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
@@ -83,30 +76,15 @@ namespace Money_Management.Views
             this.Close(); // Or navigate to another window
         }
 
-        // Handle placeholder behavior in Search TextBox
-        private void SearchTextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (SearchTextBox.Text == "Search by Source or Amount")
-            {
-                SearchTextBox.Text = "";
-            }
-        }
 
-        private void SearchTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(SearchTextBox.Text))
-            {
-                SearchTextBox.Text = "Search by Source or Amount";
-            }
-        }
-    }
 
-    // Model class for Income Entry
-    public class IncomeEntry
-    {
-        public DateTime Date { get; set; }
-        public string Source { get; set; }
-        public decimal Amount { get; set; }
+        // Model class for Income Entry
+        public class IncomeEntry
+        {
+            public DateTime Date { get; set; }
+            public string Source { get; set; }
+            public decimal Amount { get; set; }
+        }
     }
 }
 
