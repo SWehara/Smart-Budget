@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Money_Management.Views
 {
@@ -9,50 +10,70 @@ namespace Money_Management.Views
     {
         public ObservableCollection<IncomeEntry> IncomeEntries { get; set; }
 
-        private DashboardWindow _dashboardWindow; // Store reference to DashboardWindow
+        private DashboardWindow _dashboardWindow;
 
-        // Constructor that accepts DashboardWindow as a parameter
         public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
-            _dashboardWindow = dashboardWindow; // Store the reference
+            _dashboardWindow = dashboardWindow;
             IncomeEntries = new ObservableCollection<IncomeEntry>();
             IncomeDataGrid.ItemsSource = IncomeEntries;
 
-            // Optionally, you can use _dashboardWindow for other purposes
-            // For example, you can access properties or methods of DashboardWindow here
+            LoadDefaultSources();
         }
 
-        // Default constructor (if needed in some cases)
         public IncomeWindow()
         {
             InitializeComponent();
             IncomeEntries = new ObservableCollection<IncomeEntry>();
             IncomeDataGrid.ItemsSource = IncomeEntries;
+
+            LoadDefaultSources();
         }
 
+        // Load default income sources into the ComboBox
+        private void LoadDefaultSources()
+        {
+            IncomeSourceComboBox.ItemsSource = new string[]
+            {
+                "Salary", "Freelance", "Gift", "Interest", "Other"
+            };
+            IncomeSourceComboBox.SelectedIndex = 0;
+        }
 
-
-        // Add income (example)
+        // Add income
         private void AddIncomeButton_Click(object sender, RoutedEventArgs e)
         {
+            if (IncomeAmountTextBox.Text == "" || IncomeSourceComboBox.SelectedItem == null || IncomeDatePicker.SelectedDate == null)
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             var newEntry = new IncomeEntry
             {
                 Date = IncomeDatePicker.SelectedDate ?? DateTime.Now,
-                Source = IncomeSourceTextBox.Text,
+                Source = IncomeSourceComboBox.Text,
                 Amount = decimal.Parse(IncomeAmountTextBox.Text)
             };
+
             IncomeEntries.Add(newEntry);
             UpdateTotalIncome();
+
+            // Visual feedback
+            MessageBox.Show("Income added successfully ✅", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            // Clear fields (optional UX)
+            IncomeAmountTextBox.Text = "";
+            IncomeSourceComboBox.SelectedIndex = 0;
+            IncomeDatePicker.SelectedDate = null;
         }
 
-        // Update income entry (for editing selected entries)
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-            // Get selected income entry from the grid and show edit form (you can implement this part)
+            // Edit logic (not implemented)
         }
 
-        // Delete income entry
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             var selectedEntry = IncomeDataGrid.SelectedItem as IncomeEntry;
@@ -63,27 +84,38 @@ namespace Money_Management.Views
             }
         }
 
-        // Update the total income display
         private void UpdateTotalIncome()
         {
             var totalIncome = IncomeEntries.Sum(entry => entry.Amount);
             TotalIncomeTextBlock.Text = $"Total Income: Rs.{totalIncome}";
         }
 
-        // Go back to previous window
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close(); // Or navigate to another window
+            this.Close();
         }
 
-
-
-        // Model class for Income Entry
         public class IncomeEntry
         {
             public DateTime Date { get; set; }
             public string Source { get; set; }
             public decimal Amount { get; set; }
+        }
+
+        // Optional: Add custom source
+        private void AddSourceButton_Click(object sender, RoutedEventArgs e)
+        {
+            var newSource = Microsoft.VisualBasic.Interaction.InputBox("Enter new income source:", "Add Source", "");
+            if (!string.IsNullOrWhiteSpace(newSource))
+            {
+                var sources = ((string[])IncomeSourceComboBox.ItemsSource).ToList();
+                if (!sources.Contains(newSource))
+                {
+                    sources.Add(newSource);
+                    IncomeSourceComboBox.ItemsSource = sources;
+                    IncomeSourceComboBox.SelectedItem = newSource;
+                }
+            }
         }
     }
 }
