@@ -17,7 +17,7 @@ namespace Money_Management.Views
             // Open file dialog to select an image
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif" 
             };
 
             if (openFileDialog.ShowDialog() == true)
