@@ -4,9 +4,6 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         Title="Dashboard" Height="700" Width="1000">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/icon.png"/>
-        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
@@ -77,14 +74,7 @@
 
             <!-- Pie Chart -->
             <TextBlock Text="Spending Breakdown" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" Grid.Row="1"/>
-            <lvc:PieChart Grid.Row="1" Name="SpendingPieChart" LegendLocation="Right" Margin="0,40,0,0">
-                <lvc:PieChart.Series>
-                    <lvc:PieSeries Title="Food" Values="{Binding FoodSeries}" DataLabels="True"/>
-                    <lvc:PieSeries Title="Travel" Values="{Binding TravelSeries}" DataLabels="True"/>
-                    <lvc:PieSeries Title="Bills" Values="{Binding BillsSeries}" DataLabels="True"/>
-                    <lvc:PieSeries Title="Other" Values="{Binding OtherSeries}" DataLabels="True"/>
-                </lvc:PieChart.Series>
-            </lvc:PieChart>
+            <lvc:PieChart Grid.Row="1" Name="SpendingPieChart" Series="{Binding PieSeries}" LegendLocation="Right" Margin="0,40,0,0"/>
 
             <!-- Goal Progress Bar -->
             <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="0,20,0,0">
@@ -94,10 +84,10 @@
 
             <!-- Action Buttons -->
             <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button Content="Add Income" Width="120" Height="40" Margin="10"/>
-                <Button Content="Add Expense" Width="120" Height="40" Margin="10"/>
-                <Button Content="Set Budget" Width="120" Height="40" Margin="10"/>
-                <Button Content="View Reports" Width="120" Height="40" Margin="10"/>
+                <Button Content="Add Income" Width="120" Height="40" Margin="10" Click="AddIncome_Click"/>
+                <Button Content="Add Expense" Width="120" Height="40" Margin="10" Click="AddExpense_Click"/>
+                <Button Content="Set Budget" Width="120" Height="40" Margin="10" Click="SetBudget_Click"/>
+                <Button Content="View Reports" Width="120" Height="40" Margin="10" Click="ViewReports_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

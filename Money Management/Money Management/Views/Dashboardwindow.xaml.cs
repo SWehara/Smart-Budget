@@ -1,6 +1,4 @@
 ﻿using System.Windows;
-using LiveCharts;
-using LiveCharts.Wpf;
 using Money_Management.ViewModel;
 
 namespace Money_Management.Views
@@ -11,18 +9,8 @@ namespace Money_Management.Views
         {
             InitializeComponent();
 
-            // Create an instance of the DashboardViewModel
-            DashboardViewModel viewModel = new DashboardViewModel
-            {
-                // Initial data for the pie chart (these can be dynamic)
-                FoodSeries = 5000,    // Example value for Food
-                TravelSeries = 3000,  // Example value for Travel
-                BillsSeries = 8000,   // Example value for Bills
-                OtherSeries = 2000    // Example value for Other
-            };
-
-            // Set the DataContext for the window to this instance
-            this.DataContext = viewModel;
+            // Set the DataContext with default pie chart values
+            this.DataContext = new DashboardViewModel();
         }
 
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
@@ -62,7 +50,7 @@ namespace Money_Management.Views
 
         private void SetBudget_Click(object sender, RoutedEventArgs e)
         {
-            BudgetWindow budgetWindow = new BudgetWindow();
+            Budget budgetWindow = new Budget();
             budgetWindow.ShowDialog();
         }
 

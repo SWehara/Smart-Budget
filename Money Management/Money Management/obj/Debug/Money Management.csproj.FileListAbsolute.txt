@@ -23,3 +23,12 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Management.pdb
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\BudgetWindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\ReportsWindow.g.cs
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.dll
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.Wpf.dll
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.pdb
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.xml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.Wpf.pdb
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\LiveCharts.Wpf.xml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\BudgetWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\ReportsWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Money Ma.0CD33386.Up2Date
