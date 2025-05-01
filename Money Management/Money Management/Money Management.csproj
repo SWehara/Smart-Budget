@@ -62,7 +62,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ViewModel\DashboardViewModel.cs" />
+    <Compile Include="Helpers\RelayCommand.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="Views\BudgetWindow.xaml.cs">
       <DependentUpon>BudgetWindow.xaml</DependentUpon>
     </Compile>
@@ -146,22 +147,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Mainwindow.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\dashboard window.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\profile..png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Views\download.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\240_F_1094581832_Z3eZY6JP2eF5N1eSB4WYDpfaxqtc3bmH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

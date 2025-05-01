@@ -20,13 +20,13 @@
             </Grid>
             <Button Content="Income" Width="200" Height="50" Margin="10,5" Click="IncomeButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
             <Button Content="Expenses" Width="200" Height="50" Margin="10,5" Click="ExpensesButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
-            <Button Content="Balance" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
-            <Button Content="Goals" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Balance" Width="200" Height="50" Margin="10,5" Click="BalanceButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Goals" Width="200" Height="50" Margin="10,5" Click="GoalsButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
             <Separator Height="40"/>
             <StackPanel VerticalAlignment="Bottom">
-                <Button Content="Settings" Width="200" Height="50" Margin="10,5" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+                <Button Content="Settings" Width="200" Height="50" Margin="10,5" Click="SettingsButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
             </StackPanel>
-            <Button Content="Help" Width="200" Height="50" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Help" Width="200" Height="50" Click="HelpButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
         </StackPanel>
 
         <!-- Top Bar -->
@@ -51,43 +51,32 @@
             </Grid.RowDefinitions>
 
             <!-- Summary Cards -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
                 <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
                     <StackPanel>
                         <TextBlock Text="Total Income" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. 20,000" FontSize="16"/>
+                        <TextBlock Text="Rs. {Binding TotalIncome}" FontSize="16"/>
                     </StackPanel>
                 </Border>
                 <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
                     <StackPanel>
                         <TextBlock Text="Total Expenses" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. 15,000" FontSize="16"/>
+                        <TextBlock Text="Rs. {Binding TotalExpenses}" FontSize="16"/>
                     </StackPanel>
                 </Border>
                 <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
                     <StackPanel>
                         <TextBlock Text="Remaining Budget" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. 5,000" FontSize="16"/>
+                        <TextBlock Text="Rs. {Binding RemainingBudget}" FontSize="16"/>
                     </StackPanel>
                 </Border>
             </StackPanel>
 
             <!-- Pie Chart -->
-            <TextBlock Text="Spending Breakdown" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" Grid.Row="1"/>
-            <lvc:PieChart Grid.Row="1" Name="SpendingPieChart" Series="{Binding PieSeries}" LegendLocation="Right" Margin="0,40,0,0"/>
+            <StackPanel Grid.Row="1" Margin="0,0,0,0">
+                <TextBlock Text="Spending Breakdown" FontSize="20" FontWeight="Bold" Margin="10,0,0,10"/>
+                <lvc:PieChart Series="{Binding PieSeries}" LegendLocation="Right" Height="300" />
 
-            <!-- Goal Progress Bar -->
-            <StackPanel Grid.Row="1" VerticalAlignment="Bottom" Margin="0,20,0,0">
-                <TextBlock Text="Goal Progress" FontWeight="Bold" FontSize="16" Margin="0,10,0,5"/>
-                <ProgressBar Width="400" Height="25" Value="70" Maximum="100"/>
-            </StackPanel>
-
-            <!-- Action Buttons -->
-            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button Content="Add Income" Width="120" Height="40" Margin="10" Click="AddIncome_Click"/>
-                <Button Content="Add Expense" Width="120" Height="40" Margin="10" Click="AddExpense_Click"/>
-                <Button Content="Set Budget" Width="120" Height="40" Margin="10" Click="SetBudget_Click"/>
-                <Button Content="View Reports" Width="120" Height="40" Margin="10" Click="ViewReports_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

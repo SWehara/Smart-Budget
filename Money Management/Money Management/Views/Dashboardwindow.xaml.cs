@@ -5,12 +5,13 @@ namespace Money_Management.Views
 {
     public partial class DashboardWindow : Window
     {
+        private DashboardViewModel viewModel;
+
         public DashboardWindow()
         {
             InitializeComponent();
-
-            // Set the DataContext with default pie chart values
-            this.DataContext = new DashboardViewModel();
+            viewModel = new DashboardViewModel();
+            this.DataContext = viewModel;
         }
 
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
@@ -34,30 +35,19 @@ namespace Money_Management.Views
             this.Close();
         }
 
-        private void AddIncome_Click(object sender, RoutedEventArgs e)
+        public void UpdateIncome(double amount)
         {
-            IncomeWindow incomeWindow = new IncomeWindow(this);
-            incomeWindow.Show();
-            this.Hide();
+            viewModel.TotalIncome += amount;
         }
 
-        private void AddExpense_Click(object sender, RoutedEventArgs e)
+        public void UpdateExpense(double amount)
         {
-            ExpensesWindow expensesWindow = new ExpensesWindow();
-            expensesWindow.Show();
-            this.Hide();
+            viewModel.TotalExpenses += amount;
         }
 
-        private void SetBudget_Click(object sender, RoutedEventArgs e)
+        private void Window_Closed(object sender, System.EventArgs e)
         {
-            Budget budgetWindow = new Budget();
-            budgetWindow.ShowDialog();
-        }
-
-        private void ViewReports_Click(object sender, RoutedEventArgs e)
-        {
-            ReportsWindow reportsWindow = new ReportsWindow();
-            reportsWindow.ShowDialog();
+            Application.Current.Shutdown();
         }
     }
 }
