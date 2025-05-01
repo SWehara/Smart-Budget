@@ -87,7 +87,8 @@ namespace Money_Management.Views
         // Handle the Back button click event
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
+            this.Hide();
         }
 
         // Income entry model

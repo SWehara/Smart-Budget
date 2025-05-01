@@ -18,9 +18,9 @@
             <Grid Background="DarkGray" Height="90">
                 <Image Source="/Images/icon.png" Width="60" Height="60" Margin="74,-65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
-            <Button Content="Income" Width="200" Height="50" Margin="10,5" Click="IncomeButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
-            <Button Content="Expenses" Width="200" Height="50" Margin="10,5" Click="ExpensesButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
-            <Button Content="Balance" Width="200" Height="50" Margin="10,5" Click="BalanceButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Add Income" Width="200" Height="50" Margin="10,5" Click="IncomeButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Add Expenses" Width="200" Height="50" Margin="10,5" Click="ExpensesButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
+            <Button Content="Add Budget" Width="200" Height="50" Margin="10,5" Click="BudgetButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
             <Button Content="Goals" Width="200" Height="50" Margin="10,5" Click="GoalsButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
             <Separator Height="40"/>
             <StackPanel VerticalAlignment="Bottom">

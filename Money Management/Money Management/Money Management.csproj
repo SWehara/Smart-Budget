@@ -70,11 +70,17 @@
     <Compile Include="Views\ExpensesWindow.xaml.cs">
       <DependentUpon>ExpensesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\HelpWindow.xaml.cs">
+      <DependentUpon>HelpWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IncomeWindow.xaml.cs">
       <DependentUpon>IncomeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ReportsWindow.xaml.cs">
       <DependentUpon>ReportsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\BudgetWindow.xaml">
       <SubType>Designer</SubType>
@@ -85,6 +91,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ExpensesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HelpWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,6 +128,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -147,13 +161,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\download.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\240_F_1094581832_Z3eZY6JP2eF5N1eSB4WYDpfaxqtc3bmH.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\e005d76c67c51a7e467a2f6125387802.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\goals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\5066f1d3e487f3f1def676861f3254a2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\bf493b9ca99fb6d4a20e249936ff8c3e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\308d43a52783b8313d992c4418432042.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

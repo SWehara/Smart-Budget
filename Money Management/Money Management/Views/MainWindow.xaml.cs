@@ -14,40 +14,41 @@ namespace Money_Management.Views
         // Event handler for the Upload button
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
-            // Open file dialog to select an image
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif" 
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
             };
 
             if (openFileDialog.ShowDialog() == true)
             {
-                // Set the image source to the selected file
                 UserProfileImage1.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(openFileDialog.FileName));
-                UserProfileImage1.Visibility = Visibility.Visible; // Show the image
-                UploadButton1.Content = "Change Profile Picture"; // Change button text after image is uploaded
+                UserProfileImage1.Visibility = Visibility.Visible;
+                UploadButton1.Content = "Change Profile Picture";
             }
         }
 
-        // Event handler for the Proceed button
-        private void ProceedButton_Click(object sender, RoutedEventArgs e)
+        // ✅ Corrected method name and added password length validation
+        private void ProceedButton1_Click(object sender, RoutedEventArgs e)
         {
-            // Basic validation for name and password
             string name = NameTextBox1.Text;
             string password = PasswordBox1.Password;
 
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both name and password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please enter both name and password.", "Missing Information", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Open the Dashboard Window
-            DashboardWindow dashboardWindow = new DashboardWindow();
-            dashboardWindow.Show();  // Open the Dashboard Window
+            if (password.Length < 8)
+            {
+                MessageBox.Show("Password must be at least 8 characters long.", "Invalid Password", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-            this.Close();  // Close the MainWindow (to not keep the user on the initial window)
+            // Proceed to dashboard
+            DashboardWindow dashboardWindow = new DashboardWindow();
+            dashboardWindow.Show();
+            this.Close();
         }
     }
 }
-

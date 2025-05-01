@@ -28,6 +28,34 @@ namespace Money_Management.Views
             this.Hide();
         }
 
+        private void BudgetButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Your logic for Budget button
+            MessageBox.Show("Budget button clicked.");
+        }
+
+
+        private void GoalsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Add your logic here (e.g., open a goals window)
+            MessageBox.Show("Goals button clicked.");
+
+        }
+
+        private void HelpButton_Click(object sender, RoutedEventArgs e)
+        {
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.Show();
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.Show();
+        }
+
+
+
         private void ProfileImage_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             Profilewindow profileWindow = new Profilewindow();
