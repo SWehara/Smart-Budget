@@ -40,7 +40,7 @@ namespace Money_Management.Views {
     public partial class MainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 34 "..\..\..\Views\MainWindow.xaml"
+        #line 38 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image UserProfileImage1;
         
@@ -48,7 +48,7 @@ namespace Money_Management.Views {
         #line hidden
         
         
-        #line 38 "..\..\..\Views\MainWindow.xaml"
+        #line 42 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button UploadButton1;
         
@@ -56,7 +56,7 @@ namespace Money_Management.Views {
         #line hidden
         
         
-        #line 43 "..\..\..\Views\MainWindow.xaml"
+        #line 47 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox NameTextBox1;
         
@@ -64,7 +64,7 @@ namespace Money_Management.Views {
         #line hidden
         
         
-        #line 47 "..\..\..\Views\MainWindow.xaml"
+        #line 51 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox PasswordBox1;
         
@@ -72,7 +72,7 @@ namespace Money_Management.Views {
         #line hidden
         
         
-        #line 50 "..\..\..\Views\MainWindow.xaml"
+        #line 54 "..\..\..\Views\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button ProceedButton1;
         
@@ -115,7 +115,7 @@ namespace Money_Management.Views {
             case 2:
             this.UploadButton1 = ((System.Windows.Controls.Button)(target));
             
-            #line 38 "..\..\..\Views\MainWindow.xaml"
+            #line 42 "..\..\..\Views\MainWindow.xaml"
             this.UploadButton1.Click += new System.Windows.RoutedEventHandler(this.UploadButton_Click);
             
             #line default
@@ -130,7 +130,7 @@ namespace Money_Management.Views {
             case 5:
             this.ProceedButton1 = ((System.Windows.Controls.Button)(target));
             
-            #line 50 "..\..\..\Views\MainWindow.xaml"
+            #line 54 "..\..\..\Views\MainWindow.xaml"
             this.ProceedButton1.Click += new System.Windows.RoutedEventHandler(this.ProceedButton1_Click);
             
             #line default

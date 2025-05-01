@@ -16,7 +16,11 @@
         </Grid.RowDefinitions>
 
         <!-- Semi-transparent overlay -->
-        <Rectangle Grid.RowSpan="2" Fill="#AA000000"/>
+        <Rectangle Grid.RowSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Views/308d43a52783b8313d992c4418432042.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
         <!-- App Title -->
         <TextBlock Grid.Row="0" Text="Smart Goal Manager"
