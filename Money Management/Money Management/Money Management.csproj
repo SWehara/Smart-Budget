@@ -178,5 +178,14 @@
   <ItemGroup>
     <Resource Include="Views\308d43a52783b8313d992c4418432042.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\photo-1575936123452-b67c3203c357.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\WhatsApp Image 2025-05-01 at 23.15.45_844ec56b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\wallet-top-coins-with-copy-space_23-2148285285.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
