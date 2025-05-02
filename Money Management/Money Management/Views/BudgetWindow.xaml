@@ -5,8 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Money_Management.Views"
         mc:Ignorable="d"
-        Title="Budget" Height="450" Width="800">
-    <Grid>
-        
+        Title="Budget" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F2F5">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#333" Margin="0,0,0,20"/>
+
+        <!-- Main Content -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+
+                <!-- Monthly Income -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <TextBlock Text="Monthly Income (Rs):" FontSize="16" VerticalAlignment="Center" Width="200"/>
+                    <TextBox x:Name="IncomeInput" Width="200" Margin="10,0"/>
+                    <Button Content="Set Income" Width="100" Click="SetIncome_Click"/>
+                </StackPanel>
+
+                <!-- Budget Categories -->
+                <GroupBox Header="Budget Categories" Margin="0,0,0,20">
+                    <StackPanel>
+                        <DataGrid ItemsSource="{Binding Categories}" AutoGenerateColumns="False" Height="200" CanUserAddRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Category" Binding="{Binding Name}" Width="*" />
+                                <DataGridTextColumn Header="Limit (Rs.)" Binding="{Binding Limit}" Width="*" />
+                                <DataGridTextColumn Header="Spent (Rs.)" Binding="{Binding Spent}" Width="*" />
+                                <DataGridTextColumn Header="Remaining (Rs.)" Binding="{Binding Remaining}" Width="*" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button Content="+ Add Category" HorizontalAlignment="Right" Width="150" Margin="0,10,0,0" Click="AddCategory_Click"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <!-- Financial Goals -->
+                <GroupBox Header="Financial Goals" Margin="0,0,0,20">
+                    <ItemsControl ItemsSource="{Binding Goals}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Margin="0,5">
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold"/>
+                                    <ProgressBar Value="{Binding Progress}" Height="20" Margin="0,5,0,0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </GroupBox>
+
+                <!-- Pie Chart Placeholder -->
+                <GroupBox Header="Spending Distribution" Margin="0,0,0,20">
+                    <Grid Height="200">
+                        <TextBlock Text="[Pie Chart Visualization Here]" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   Foreground="Gray"/>
+                    </Grid>
+                </GroupBox>
+
+                <!-- Remaining Budget Summary -->
+                <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="Green" Margin="0,0,0,10"/>
+
+                <!-- Alerts -->
+                <StackPanel Margin="0,0,0,20">
+                    <TextBlock Text="⚠️ Eating Out: 85% of budget used" Foreground="OrangeRed"/>
+                    <TextBlock Text="❗ Transport: Over budget!" Foreground="Red"/>
+                </StackPanel>
+
+                <!-- Navigation Buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                    <Button Content="Weekly/Monthly Reports" Width="180" Margin="0,0,10,0"/>
+                    <Button Content="Back to Dashboard" Width="150"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
