@@ -1,20 +1,135 @@
 ﻿<Window x:Class="Money_Management.Views.ExpensesWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Expenses Window" Height="450" Width="800" Background="Gray">
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="Gray" Width="500" Height="300">
-            <TextBlock Text="Expenses Management" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="Expenses" Height="550" Width="700"
+        Background="#1E1E2F" WindowStartupLocation="CenterScreen">
 
-            
-            <TextBox x:Name="ExpenseNameTextBox" Width="200" Height="30" Text="Enter Expense Name" Foreground="Gray" Margin="0,0,0,10"
-                     GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+    <Window.Resources>
+        <!-- Button Style -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#4CAF50"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-            <TextBox x:Name="ExpenseAmountTextBox" Width="200" Height="30" Text="Enter Expense Amount" Foreground="Gray" Margin="0,0,0,10"
-                     GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <!-- TextBox Style -->
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
 
-            <Button x:Name="AddExpenseButton" Content="Add Expense" Width="100" Height="30" Click="AddExpenseButton_Click"/>
-            <Button x:Name="CloseButton" Content="Close" Width="100" Height="30" Margin="0,10,0,0" Click="CloseButton_Click"/>
-        </StackPanel>
+        <!-- ComboBox Style -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderBrush" Value="#4CAF50"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back Button -->
+        <Button Content="← Back" Width="100" Height="35"
+                HorizontalAlignment="Left"
+                Click="BackButton_Click" />
+
+        <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Section: Input -->
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBlock Text="Total Expenses This Month:" FontSize="16" FontWeight="Bold" 
+                           Foreground="White" Margin="0,0,0,10"/>
+                <TextBlock x:Name="TotalExpenseTextBlock" Text="Rs. 0" FontSize="24" FontWeight="Bold" 
+                           Foreground="#FF5252" Margin="0,0,0,20"/>
+
+                <TextBlock Text="Select Category:" FontSize="14" Foreground="White"/>
+                <ComboBox x:Name="CategoryComboBox" Width="200">
+                    <ComboBoxItem Content="Food"/>
+                    <ComboBoxItem Content="Transport"/>
+                    <ComboBoxItem Content="Utilities"/>
+                    <ComboBoxItem Content="Entertainment"/>
+                    <ComboBoxItem Content="Health"/>
+                    <ComboBoxItem Content="Other"/>
+                </ComboBox>
+
+                <TextBlock Text="Enter Expense Amount:" FontSize="14" Foreground="White"/>
+                <TextBox x:Name="ExpenseAmountTextBox" Width="200" Height="40"/>
+
+                <TextBlock Text="Select Date:" FontSize="14" Foreground="White"/>
+                <DatePicker x:Name="ExpenseDatePicker" Width="200" Height="40" 
+                            SelectedDate="{x:Static sys:DateTime.Now}" Margin="0,5,0,15"/>
+
+                <TextBlock Text="Notes (Optional):" FontSize="14" Foreground="White"/>
+                <TextBox x:Name="NotesTextBox" Width="200" Height="60" TextWrapping="Wrap" AcceptsReturn="True"/>
+
+                <Button x:Name="AddExpenseButton" Content="Add Expense" Width="200" Height="40" Click="AddExpenseButton_Click"/>
+
+                <TextBlock x:Name="ExpenseMessageTextBlock" Text="" FontSize="14" HorizontalAlignment="Center"
+                           Foreground="LightGreen" Margin="0,10,0,0"/>
+            </StackPanel>
+
+            <!-- Right Section: Data Grid -->
+            <DataGrid x:Name="ExpensesDataGrid" Grid.Column="1"
+                      AutoGenerateColumns="False"
+                      Background="White" Foreground="Black"
+                      BorderThickness="0" Margin="10"
+                      RowHeaderWidth="0"
+                      HeadersVisibility="Column"
+                      CanUserAddRows="False"
+                      ColumnHeaderHeight="30" RowHeight="48">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*" />
+                    <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="*" />
+                    <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" Width="*" />
+
+                    <!-- Edit Button -->
+                    <DataGridTemplateColumn Header="Edit" Width="60">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="✏" Width="40" Height="35" Click="EditExpense_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <!-- Delete Button -->
+                    <DataGridTemplateColumn Header="Delete" Width="60">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="🗑" Width="40" Height="35" Click="DeleteExpense_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Window>

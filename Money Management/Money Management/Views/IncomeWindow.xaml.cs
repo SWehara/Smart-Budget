@@ -121,7 +121,8 @@ namespace Money_Management.Views
             {
                 IncomeAmountTextBox.Text = entry.Amount.ToString();
                 IncomeSourceComboBox.SelectedItem = entry.Source;
-                selectedEntry = entry;
+                selectedEntry = (entry);
+                UpdateTotalIncome();
             }
         }
 

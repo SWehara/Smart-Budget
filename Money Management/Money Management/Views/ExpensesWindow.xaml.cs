@@ -1,70 +1,111 @@
-﻿using System.Windows;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 
 namespace Money_Management.Views
 {
     public partial class ExpensesWindow : Window
     {
+        public ObservableCollection<Expense> ExpensesList { get; set; } = new ObservableCollection<Expense>();
+
         public ExpensesWindow()
         {
             InitializeComponent();
+            ExpensesDataGrid.ItemsSource = ExpensesList;
+            ExpenseDatePicker.SelectedDate = DateTime.Now;
         }
 
-        
-        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            if (textBox != null && textBox.Foreground == Brushes.Gray)
-            {
-                textBox.Text = ""; 
-                textBox.Foreground = Brushes.Black; 
-            }
-        }
-
-        
-        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            TextBox textBox = sender as TextBox;
-            if (textBox != null && string.IsNullOrEmpty(textBox.Text))
-            {
-                textBox.Foreground = Brushes.Gray; 
-                if (textBox.Name == "ExpenseNameTextBox")
-                {
-                    textBox.Text = "Enter Expense Name"; 
-                }
-                else if (textBox.Name == "ExpenseAmountTextBox")
-                {
-                    textBox.Text = "Enter Expense Amount"; 
-                }
-            }
-        }
-
-        
         private void AddExpenseButton_Click(object sender, RoutedEventArgs e)
         {
-            string expenseName = ExpenseNameTextBox.Foreground == Brushes.Gray ? "" : ExpenseNameTextBox.Text;
-            string expenseAmount = ExpenseAmountTextBox.Foreground == Brushes.Gray ? "" : ExpenseAmountTextBox.Text;
+            string amountText = ExpenseAmountTextBox.Text.Trim();
+            string notes = NotesTextBox.Text.Trim();
+            string category = (CategoryComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "";
+            DateTime? expenseDate = ExpenseDatePicker.SelectedDate;
 
-            if (string.IsNullOrEmpty(expenseName) || string.IsNullOrEmpty(expenseAmount))
+            if (string.IsNullOrWhiteSpace(amountText) || string.IsNullOrWhiteSpace(category) || expenseDate == null)
             {
-                MessageBox.Show("Please enter both the expense name and amount.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please complete all required fields.", "Missing Information", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            MessageBox.Show($"Expense Added: {expenseName} - {expenseAmount}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (!Regex.IsMatch(amountText, @"^\d+(\.\d{1,2})?$"))
+            {
+                MessageBox.Show("Please enter a valid numeric amount.", "Invalid Amount", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-            
-            ExpenseNameTextBox.Text = "Enter Expense Name";
-            ExpenseNameTextBox.Foreground = Brushes.Gray;
-            ExpenseAmountTextBox.Text = "Enter Expense Amount";
-            ExpenseAmountTextBox.Foreground = Brushes.Gray;
+            decimal amount = decimal.Parse(amountText);
+
+            ExpensesList.Add(new Expense
+            {
+                Date = expenseDate.Value.ToString("dd-MM-yyyy"),
+                Category = category,
+                Amount = $"Rs. {amount:0.00}",
+                Notes = notes
+            });
+
+            UpdateTotalExpenses();
+            ResetFields();
+
+            ExpenseMessageTextBlock.Text = "Expense added successfully!";
         }
 
-        
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        private void UpdateTotalExpenses()
         {
-            this.Close(); 
+            decimal total = 0;
+            foreach (var item in ExpensesList)
+            {
+                if (decimal.TryParse(item.Amount.Replace("Rs. ", ""), out decimal amt))
+                {
+                    total += amt;
+                }
+            }
+            TotalExpenseTextBlock.Text = $"Rs. {total:0.00}";
         }
+
+        private void ResetFields()
+        {
+            ExpenseAmountTextBox.Text = "";
+            NotesTextBox.Text = "";
+            CategoryComboBox.SelectedIndex = -1;
+            ExpenseDatePicker.SelectedDate = DateTime.Now;
+            ExpenseMessageTextBlock.Text = "";
+        }
+
+        private void EditExpense_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Expense expense)
+            {
+                MessageBox.Show("Edit functionality can be added here.");
+                // Example: Load fields with current values for editing.
+            }
+        }
+
+        private void DeleteExpense_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is Expense expense)
+            {
+                if (MessageBox.Show("Are you sure you want to delete this expense?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    ExpensesList.Remove(expense);
+                    UpdateTotalExpenses();
+                }
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); // Or navigate to another window
+        }
+    }
+
+    public class Expense
+    {
+        public string Date { get; set; }
+        public string Category { get; set; }
+        public string Amount { get; set; }
+        public string Notes { get; set; }
     }
 }

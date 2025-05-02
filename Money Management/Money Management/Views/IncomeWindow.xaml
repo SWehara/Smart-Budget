@@ -73,12 +73,12 @@
                            Foreground="#4CAF50" Margin="0,0,0,20"/>
 
                 <TextBlock Text="Enter Monthly Income:" FontSize="14" Foreground="White"/>
-                <TextBox x:Name="IncomeAmountTextBox" Width="200" Height="30"/>
+                <TextBox x:Name="IncomeAmountTextBox" Width="200" Height="40"/>
 
                 <TextBlock Text="Select Income Source:" FontSize="14" Foreground="White"/>
                 <ComboBox x:Name="IncomeSourceComboBox" Width="200"/>
 
-                <Button x:Name="SetIncomeButton" Content="Set / Update Income" Width="200" Height="40"
+                <Button x:Name="SetIncomeButton" Content="Update Income" Width="200" Height="40"
                         Click="SetIncomeButton_Click"/>
 
                 <TextBlock x:Name="MessageTextBlock" Text="" FontSize="14" HorizontalAlignment="Center"
@@ -93,10 +93,10 @@
                       RowHeaderWidth="0"
                       HeadersVisibility="Column"
                       CanUserAddRows="False"
-                      ColumnHeaderHeight="30" RowHeight="30">
+                      ColumnHeaderHeight="30" RowHeight="48">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*" />
+                    <DataGridTextColumn Header="Date and Time" Binding="{Binding Date}" Width="*" />
                     <DataGridTextColumn Header="Source" Binding="{Binding Source}" Width="*" />
                     <DataGridTextColumn Header="Amount" Binding="{Binding Amount}" Width="*" />
 
@@ -104,7 +104,7 @@
                     <DataGridTemplateColumn Header="Edit" Width="60">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="✏" Width="40" Height="25" Click="EditButton_Click"/>
+                                <Button Content="✏" Width="40" Height="35" Click="EditButton_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
@@ -113,7 +113,7 @@
                     <DataGridTemplateColumn Header="Delete" Width="60">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="🗑" Width="40" Height="25" Click="DeleteButton_Click"/>
+                                <Button Content="🗑" Width="40" Height="35" Click="DeleteButton_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
