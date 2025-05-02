@@ -12,19 +12,24 @@ namespace Money_Management.Views
         public ObservableCollection<IncomeEntry> IncomeEntries { get; set; }
         private DashboardWindow _dashboardWindow;
 
+        // Track selected item for editing
+        private IncomeEntry selectedEntry = null;
+
         public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
             _dashboardWindow = dashboardWindow;
-            IncomeEntries = new ObservableCollection<IncomeEntry>();
-            IncomeDataGrid.ItemsSource = IncomeEntries;
-
-            LoadDefaultSources();
+            InitializeIncomeWindow();
         }
 
         public IncomeWindow()
         {
             InitializeComponent();
+            InitializeIncomeWindow();
+        }
+
+        private void InitializeIncomeWindow()
+        {
             IncomeEntries = new ObservableCollection<IncomeEntry>();
             IncomeDataGrid.ItemsSource = IncomeEntries;
 
@@ -51,30 +56,42 @@ namespace Money_Management.Views
                 return;
             }
 
-            try
+            if (!decimal.TryParse(IncomeAmountTextBox.Text, out decimal amount))
             {
+                MessageTextBlock.Text = "Invalid amount format.";
+                MessageTextBlock.Foreground = new SolidColorBrush(Colors.Red);
+                return;
+            }
+
+            if (selectedEntry != null)
+            {
+                // Update existing entry
+                selectedEntry.Amount = amount;
+                selectedEntry.Source = IncomeSourceComboBox.Text;
+                IncomeDataGrid.Items.Refresh();
+                selectedEntry = null;
+
+                MessageTextBlock.Text = "Income updated successfully!";
+                MessageTextBlock.Foreground = new SolidColorBrush(Colors.LightGreen);
+            }
+            else
+            {
+                // Add new entry
                 var newEntry = new IncomeEntry
                 {
                     Source = IncomeSourceComboBox.Text,
-                    Amount = decimal.Parse(IncomeAmountTextBox.Text)
+                    Amount = amount,
+                    Date = DateTime.Now
                 };
 
-                // Add or update the income entry
                 IncomeEntries.Add(newEntry);
-                UpdateTotalIncome();
 
-                MessageTextBlock.Text = "Income added/updated successfully!";
+                MessageTextBlock.Text = "Income added successfully!";
                 MessageTextBlock.Foreground = new SolidColorBrush(Colors.LightGreen);
+            }
 
-                // Optionally clear the fields for better UX
-                IncomeAmountTextBox.Clear();
-                IncomeSourceComboBox.SelectedIndex = 0;
-            }
-            catch (FormatException ex)
-            {
-                MessageTextBlock.Text = $"Invalid amount format: {ex.Message}";
-                MessageTextBlock.Foreground = new SolidColorBrush(Colors.Red);
-            }
+            UpdateTotalIncome();
+            ClearForm();
         }
 
         // Update the total income display
@@ -84,16 +101,44 @@ namespace Money_Management.Views
             CurrentIncomeTextBlock.Text = $"Rs. {totalIncome}";
         }
 
-        // Handle the Back button click event
+        // Clear form inputs
+        private void ClearForm()
+        {
+            IncomeAmountTextBox.Clear();
+            IncomeSourceComboBox.SelectedIndex = 0;
+        }
+
+        // Back button
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            
             this.Hide();
+        }
+
+        // Edit button
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.DataContext is IncomeEntry entry)
+            {
+                IncomeAmountTextBox.Text = entry.Amount.ToString();
+                IncomeSourceComboBox.SelectedItem = entry.Source;
+                selectedEntry = entry;
+            }
+        }
+
+        // Delete button
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.DataContext is IncomeEntry entry)
+            {
+                IncomeEntries.Remove(entry);
+                UpdateTotalIncome();
+            }
         }
 
         // Income entry model
         public class IncomeEntry
         {
+            public DateTime Date { get; set; } = DateTime.Now;
             public string Source { get; set; }
             public decimal Amount { get; set; }
         }
