@@ -119,8 +119,10 @@
     <Compile Include="Models\FinancialGoal.cs" />
     <Compile Include="Models\Goal.cs" />
     <Compile Include="Models\GoalRepository.cs" />
-    <Compile Include="ViewModels\BudgetViewModelcs.cs" />
+    <Compile Include="ViewModels\BudgetViewModel.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\ExpensesViewModel.cs" />
+    <Compile Include="ViewModels\IncomeViewModel.cs" />
     <Compile Include="Views\BudgetWindow.xaml.cs">
       <DependentUpon>BudgetWindow.xaml</DependentUpon>
     </Compile>
@@ -218,27 +220,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Resource Include="Views\e005d76c67c51a7e467a2f6125387802.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\goals.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\5066f1d3e487f3f1def676861f3254a2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\bf493b9ca99fb6d4a20e249936ff8c3e.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\308d43a52783b8313d992c4418432042.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\photo-1575936123452-b67c3203c357.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\WhatsApp Image 2025-05-01 at 23.15.45_844ec56b.jpg" />
-  </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\wallet-top-coins-with-copy-space_23-2148285285.jpg" />
   </ItemGroup>

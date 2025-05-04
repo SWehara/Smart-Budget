@@ -9,10 +9,13 @@ namespace Money_Management.Views
     public partial class ExpensesWindow : Window
     {
         public ObservableCollection<Expense> ExpensesList { get; set; } = new ObservableCollection<Expense>();
+        private DashboardWindow _dashboardWindow;
 
-        public ExpensesWindow()
+        // Constructor that requires a DashboardWindow reference
+        public ExpensesWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
+            _dashboardWindow = dashboardWindow;
             ExpensesDataGrid.ItemsSource = ExpensesList;
             ExpenseDatePicker.SelectedDate = DateTime.Now;
         }
@@ -79,7 +82,6 @@ namespace Money_Management.Views
             if (sender is Button button && button.DataContext is Expense expense)
             {
                 MessageBox.Show("Edit functionality can be added here.");
-                // Example: Load fields with current values for editing.
             }
         }
 
@@ -97,7 +99,8 @@ namespace Money_Management.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close(); // Or navigate to another window
+            _dashboardWindow.Show();
+            this.Close();
         }
     }
 

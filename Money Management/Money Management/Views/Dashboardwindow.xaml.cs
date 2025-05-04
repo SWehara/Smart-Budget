@@ -23,25 +23,30 @@ namespace Money_Management.Views
 
         private void ExpensesButton_Click(object sender, RoutedEventArgs e)
         {
-            ExpensesWindow expensesWindow = new ExpensesWindow();
+            ExpensesWindow expensesWindow = new ExpensesWindow(this);
             expensesWindow.Show();
             this.Hide();
         }
 
         private void BudgetButton_Click(object sender, RoutedEventArgs e)
         {
-            // Your logic here
+            // Create an instance of the BudgetWindow
+            BudgetWindow budgetWindow = new BudgetWindow();
+
+            // Set BudgetWindow as the main window
+            Application.Current.MainWindow = budgetWindow;
+
+            // Hide the Dashboard window
+            this.Hide();
+
+            // Show the BudgetWindow
+            budgetWindow.Show();
         }
-
-
-
-
 
         private void GoalsButton_Click(object sender, RoutedEventArgs e)
         {
-            // Add your logic here (e.g., open a goals window)
+            
             MessageBox.Show("Goals button clicked.");
-
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
@@ -55,8 +60,6 @@ namespace Money_Management.Views
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.Show();
         }
-
-
 
         private void ProfileImage_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
