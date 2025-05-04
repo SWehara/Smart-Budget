@@ -3,108 +3,112 @@
   "WorkspaceRootPath": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|d:\\downloads\\project file\\application-development-ca1-swehara\\money management\\money management\\views\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\helpwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\expenseswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\expenseswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\incomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\incomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\expenseswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\expenseswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\expensesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\expensesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\incomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\incomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\budgetwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\budgetwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\budgetwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\budgetwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\financialgoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\financialgoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\expenseswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\expenseswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\incomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\incomewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|d:\\downloads\\project file\\application-development-ca1-swehara\\money management\\money management\\views\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\reportswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\reportswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\incomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\incomewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\helpwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\helpwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\expenseswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\expenseswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\budgetwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\budgetwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\budgetwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\budgetwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\incomeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\expensesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\expensesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\viewmodels\\budgetviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\goalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\financialgoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\financialgoal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\money management\\views\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1CC88B2-3C4A-44D7-B96C-0A8E93F71EFA}|Money Management\\Money Management.csproj|solutionrelative:money management\\views\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -145,11 +149,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "IncomeWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\IncomeWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\IncomeWindow.xaml",
@@ -157,24 +161,49 @@
               "RelativeToolTip": "Money Management\\Views\\IncomeWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-05T10:22:47.849Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Money Management\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Money Management\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-07T05:51:08.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Dashboardwindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\Dashboardwindow.xaml.cs",
               "RelativeDocumentMoniker": "Money Management\\Views\\Dashboardwindow.xaml.cs",
               "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\Dashboardwindow.xaml.cs",
               "RelativeToolTip": "Money Management\\Views\\Dashboardwindow.xaml.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwDUAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAiwCEAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T10:26:11.876Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "ExpensesWindow.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml",
+              "RelativeDocumentMoniker": "Money Management\\Views\\ExpensesWindow.xaml",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml",
+              "RelativeToolTip": "Money Management\\Views\\ExpensesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-05T10:26:15.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Dashboardwindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\Dashboardwindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\Dashboardwindow.xaml",
@@ -186,41 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExpensesWindow.xaml",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml",
-              "RelativeDocumentMoniker": "Money Management\\Views\\ExpensesWindow.xaml",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml",
-              "RelativeToolTip": "Money Management\\Views\\ExpensesWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-05T10:26:15.051Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ExpensesWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Money Management\\Views\\ExpensesWindow.xaml.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml.cs",
-              "RelativeToolTip": "Money Management\\Views\\ExpensesWindow.xaml.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAcwHIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T10:26:19.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SettingsWindow.xaml",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\SettingsWindow.xaml",
-              "RelativeDocumentMoniker": "Money Management\\Views\\SettingsWindow.xaml",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\SettingsWindow.xaml",
-              "RelativeToolTip": "Money Management\\Views\\SettingsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-01T05:08:09.857Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "HelpWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\HelpWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\HelpWindow.xaml",
@@ -232,65 +227,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BudgetWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\BudgetWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Money Management\\Views\\BudgetWindow.xaml.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\BudgetWindow.xaml.cs",
-              "RelativeToolTip": "Money Management\\Views\\BudgetWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAABAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IncomeWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\IncomeWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\Views\\IncomeWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\IncomeWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\Views\\IncomeWindow.xaml.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAswJEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T07:23:41.303Z"
+              "WhenOpened": "2025-04-05T10:22:51.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.xaml",
-              "RelativeDocumentMoniker": "Money Management\\App.xaml",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.xaml",
-              "RelativeToolTip": "Money Management\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-07T15:16:18.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IncomeViewModel.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\IncomeViewModel.cs",
-              "RelativeDocumentMoniker": "Money Management\\ViewModels\\IncomeViewModel.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\IncomeViewModel.cs",
-              "RelativeToolTip": "Money Management\\ViewModels\\IncomeViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "ExpensesViewModel.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\ExpensesViewModel.cs",
+              "RelativeDocumentMoniker": "Money Management\\ViewModels\\ExpensesViewModel.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\ExpensesViewModel.cs",
+              "RelativeToolTip": "Money Management\\ViewModels\\ExpensesViewModel.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T16:02:16.112Z"
+              "WhenOpened": "2025-05-04T16:03:33.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Helpers\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Money Management\\Helpers\\RelayCommand.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Helpers\\RelayCommand.cs",
-              "RelativeToolTip": "Money Management\\Helpers\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T04:26:05.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Money Management\\Views\\MainWindow.xaml",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "Money Management\\Views\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-07T05:51:08.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 17,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "Money Management\\ViewModels\\DashboardViewModel.cs",
@@ -302,91 +263,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GoalRepository.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\GoalRepository.cs",
-              "RelativeDocumentMoniker": "Money Management\\Models\\GoalRepository.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\GoalRepository.cs",
-              "RelativeToolTip": "Money Management\\Models\\GoalRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwBoAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ExpensesWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\Views\\ExpensesWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ExpensesWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\Views\\ExpensesWindow.xaml.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAwA0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T03:55:12.42Z"
+              "WhenOpened": "2025-04-05T10:26:19.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Goal.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Goal.cs",
-              "RelativeDocumentMoniker": "Money Management\\Models\\Goal.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Goal.cs",
-              "RelativeToolTip": "Money Management\\Models\\Goal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Helpers\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Money Management\\Helpers\\RelayCommand.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Helpers\\RelayCommand.cs",
+              "RelativeToolTip": "Money Management\\Helpers\\RelayCommand.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T03:48:30.657Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Money Management\\Views\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Money Management\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T05:51:15.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.config",
-              "RelativeDocumentMoniker": "Money Management\\App.config",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.config",
-              "RelativeToolTip": "Money Management\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-04T03:39:06.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Money Management\\Models\\Category.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Category.cs",
-              "RelativeToolTip": "Money Management\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:00:23.853Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IncomeWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\IncomeWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Money Management\\Views\\IncomeWindow.xaml.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\IncomeWindow.xaml.cs",
-              "RelativeToolTip": "Money Management\\Views\\IncomeWindow.xaml.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAcwJoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T10:22:51.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExpensesViewModel.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\ExpensesViewModel.cs",
-              "RelativeDocumentMoniker": "Money Management\\ViewModels\\ExpensesViewModel.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\ExpensesViewModel.cs",
-              "RelativeToolTip": "Money Management\\ViewModels\\ExpensesViewModel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T16:03:33.568Z"
+              "WhenOpened": "2025-05-01T04:26:05.444Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "HelpWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\HelpWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\Views\\HelpWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\HelpWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\Views\\HelpWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T17:19:02.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "Money Management\\Views\\SettingsWindow.xaml",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\SettingsWindow.xaml",
+              "RelativeToolTip": "Money Management\\Views\\SettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-01T05:08:09.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "BudgetWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\BudgetWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\BudgetWindow.xaml",
@@ -398,30 +322,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "FinancialGoal.cs",
-              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\FinancialGoal.cs",
-              "RelativeDocumentMoniker": "Money Management\\Models\\FinancialGoal.cs",
-              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\FinancialGoal.cs",
-              "RelativeToolTip": "Money Management\\Models\\FinancialGoal.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
+              "Title": "IncomeViewModel.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\IncomeViewModel.cs",
+              "RelativeDocumentMoniker": "Money Management\\ViewModels\\IncomeViewModel.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\IncomeViewModel.cs",
+              "RelativeToolTip": "Money Management\\ViewModels\\IncomeViewModel.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwCAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T08:02:08.53Z"
+              "WhenOpened": "2025-05-04T16:02:16.112Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "BudgetViewModel.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\BudgetViewModel.cs",
               "RelativeDocumentMoniker": "Money Management\\ViewModels\\BudgetViewModel.cs",
               "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ViewModels\\BudgetViewModel.cs",
               "RelativeToolTip": "Money Management\\ViewModels\\BudgetViewModel.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAcwD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T07:58:25.474Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 19,
+              "Title": "GoalRepository.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\GoalRepository.cs",
+              "RelativeDocumentMoniker": "Money Management\\Models\\GoalRepository.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\GoalRepository.cs",
+              "RelativeToolTip": "Money Management\\Models\\GoalRepository.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowCYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T03:55:12.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.xaml",
+              "RelativeDocumentMoniker": "Money Management\\App.xaml",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.xaml",
+              "RelativeToolTip": "Money Management\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-07T15:16:18.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ReportsWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\ReportsWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\ReportsWindow.xaml",
@@ -432,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 8,
               "Title": "Profilewindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\Profilewindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Views\\Profilewindow.xaml",
@@ -443,7 +391,79 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\Views\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T05:51:15.299Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 24,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.config",
+              "RelativeDocumentMoniker": "Money Management\\App.config",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\App.config",
+              "RelativeToolTip": "Money Management\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-04T03:39:06.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FinancialGoal.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\FinancialGoal.cs",
+              "RelativeDocumentMoniker": "Money Management\\Models\\FinancialGoal.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\FinancialGoal.cs",
+              "RelativeToolTip": "Money Management\\Models\\FinancialGoal.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T08:02:08.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Money Management\\Models\\Category.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Category.cs",
+              "RelativeToolTip": "Money Management\\Models\\Category.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T08:00:23.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Goal.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Goal.cs",
+              "RelativeDocumentMoniker": "Money Management\\Models\\Goal.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Models\\Goal.cs",
+              "RelativeToolTip": "Money Management\\Models\\Goal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T03:48:30.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BudgetWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\BudgetWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Money Management\\Views\\BudgetWindow.xaml.cs",
+              "ToolTip": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\BudgetWindow.xaml.cs",
+              "RelativeToolTip": "Money Management\\Views\\BudgetWindow.xaml.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAAACsAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T07:23:41.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Profilewindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Views\\Profilewindow.xaml.cs",
               "RelativeDocumentMoniker": "Money Management\\Views\\Profilewindow.xaml.cs",
@@ -455,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Dashboardwindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Dashboardwindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Dashboardwindow.xaml",
@@ -466,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Profilewindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Profilewindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\Profilewindow.xaml",
@@ -477,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IncomeWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\IncomeWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\IncomeWindow.xaml",
@@ -488,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Dashboardwindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\Dashboardwindow.xaml.cs",
               "RelativeDocumentMoniker": "Money Management\\Dashboardwindow.xaml.cs",
@@ -499,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "WpfXamlLoader.cs",
               "DocumentMoniker": "C:\\Users\\HP\\AppData\\Local\\Temp\\.vsdbgsrc\\c6a5a7f5f1f891b96e7ce20decdfb3b83d9ea38a008c3e03a9a2dc211cf459f6\\WpfXamlLoader.cs",
               "ToolTip": "C:\\Users\\HP\\AppData\\Local\\Temp\\.vsdbgsrc\\c6a5a7f5f1f891b96e7ce20decdfb3b83d9ea38a008c3e03a9a2dc211cf459f6\\WpfXamlLoader.cs",
@@ -509,7 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "ExpensesWindow.xaml",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ExpensesWindow.xaml",
               "RelativeDocumentMoniker": "Money Management\\ExpensesWindow.xaml",
@@ -520,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "IncomeWindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\IncomeWindow.xaml.cs",
               "RelativeDocumentMoniker": "Money Management\\IncomeWindow.xaml.cs",
@@ -531,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "ExpensesWindow.xaml.cs",
               "DocumentMoniker": "D:\\Downloads\\Project File\\application-development-ca1-SWehara\\Money Management\\Money Management\\ExpensesWindow.xaml.cs",
               "RelativeDocumentMoniker": "Money Management\\ExpensesWindow.xaml.cs",

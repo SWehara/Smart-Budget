@@ -11,7 +11,7 @@ namespace Money_Management.Views
         public ObservableCollection<Expense> ExpensesList { get; set; } = new ObservableCollection<Expense>();
         private DashboardWindow _dashboardWindow;
 
-        // Constructor that requires a DashboardWindow reference
+        
         public ExpensesWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();

@@ -30,7 +30,7 @@ namespace Money_Management.ViewModels
         public IncomeViewModel()
         {
             IncomeRecords = new ObservableCollection<IncomeRecord>();
-            // Initialize with some data if needed
+            
         }
 
         public void AddIncome(IncomeRecord income)

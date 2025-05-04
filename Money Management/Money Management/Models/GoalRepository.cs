@@ -7,23 +7,23 @@ namespace Money_Management.Data
 {
     public class GoalRepository
     {
-        // Connection string should be retrieved securely and properly from the configuration.
+        
         private readonly string _connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
         public void AddGoal(Goal goal)
         {
-            // Use a 'using' statement for the connection to ensure proper disposal.
+            
             using (var conn = new MySqlConnection(_connectionString))
             {
                 conn.Open();
 
-                // Query to insert a new goal into the 'goals' table.
+                
                 string query = @"INSERT INTO goals (title, description, category, target_date, is_completed)
                                  VALUES (@title, @description, @category, @targetDate, @isCompleted)";
 
                 using (var cmd = new MySqlCommand(query, conn))
                 {
-                    // Adding parameters to prevent SQL injection and bind values.
+                    
                     cmd.Parameters.AddWithValue("@title", goal.Title);
                     cmd.Parameters.AddWithValue("@description", goal.Description);
                     cmd.Parameters.AddWithValue("@category", goal.Category);
@@ -36,8 +36,7 @@ namespace Money_Management.Data
             }
         }
 
-        // You can later add other methods like GetAllGoals(), UpdateGoal(), DeleteGoal() as needed.
-        // For example, here's how you might add a GetAllGoals method:
+       
 
         public List<Goal> GetAllGoals()
         {
