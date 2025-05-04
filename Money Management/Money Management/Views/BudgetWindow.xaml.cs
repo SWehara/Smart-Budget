@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Money_Management.Views
 {
-    public partial class Budget : Window, INotifyPropertyChanged
+    public partial class BudgetWindow : Window, INotifyPropertyChanged
     {
         public ObservableCollection<BudgetCategory> Categories { get; set; } = new ObservableCollection<BudgetCategory>();
         public ObservableCollection<Goal> Goals { get; set; } = new ObservableCollection<Goal>();
@@ -35,15 +35,8 @@ namespace Money_Management.Views
             }
         }
 
-        private void OpenBudget_Click(object sender, RoutedEventArgs e)
-        {
-            Budget budgetWindow = new Budget();
-            budgetWindow.Show(); // or budgetWindow.ShowDialog(); if you want it modal
-            this.Close(); // or this.Hide(); to return later
-        }
-
-
-        public Budget()
+        // ✅ Corrected constructor name
+        public BudgetWindow()
         {
             InitializeComponent();
             DataContext = this;
@@ -79,7 +72,16 @@ namespace Money_Management.Views
         {
             double totalSpent = Categories.Sum(c => c.Spent);
             RemainingBudget = MonthlyIncome - totalSpent;
-            RemainingSummary.Text = $"You have Rs. {RemainingBudget:N0} left this month";
+
+            if (RemainingSummary != null)
+            {
+                RemainingSummary.Text = $"You have Rs. {RemainingBudget:N0} left this month";
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

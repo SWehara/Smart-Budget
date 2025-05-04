@@ -30,10 +30,10 @@ namespace Money_Management.Views
 
         private void BudgetButton_Click(object sender, RoutedEventArgs e)
         {
-            Budget budgetWindow = new Budget();
-            budgetWindow.Show();
-            this.Hide(); // optional: hides dashboard while budget is open
+            // Your logic here
         }
+
+
 
 
 
