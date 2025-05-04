@@ -45,32 +45,15 @@
 
         <!-- Main Content Area -->
         <Grid Grid.Row="1" Grid.Column="1" Margin="10">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Views/dashboard window.jpeg"/>
+            </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Summary Cards -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
-                    <StackPanel>
-                        <TextBlock Text="Total Income" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. {Binding TotalIncome}" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-                <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
-                    <StackPanel>
-                        <TextBlock Text="Total Expenses" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. {Binding TotalExpenses}" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-                <Border Background="WhiteSmoke" BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="20" Margin="10">
-                    <StackPanel>
-                        <TextBlock Text="Remaining Budget" FontWeight="Bold"/>
-                        <TextBlock Text="Rs. {Binding RemainingBudget}" FontSize="16"/>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
+            
 
             <!-- Placeholder for future content, if needed -->
         </Grid>

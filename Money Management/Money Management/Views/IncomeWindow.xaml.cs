@@ -41,10 +41,7 @@ namespace Money_Management.Views
         // Load default income sources into the ComboBox
         private void LoadDefaultSources()
         {
-            IncomeSourceComboBox.ItemsSource = new string[]
-            {
-                "Salary", "Freelance", "Gift", "Interest", "Other"
-            };
+            IncomeSourceComboBox.ItemsSource = new string[] { "Salary", "Freelance", "Gift", "Interest", "Other" };
             IncomeSourceComboBox.SelectedIndex = 0;
         }
 
@@ -155,4 +152,3 @@ namespace Money_Management.Views
         }
     }
 }
-

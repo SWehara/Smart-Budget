@@ -53,6 +53,7 @@ namespace Money_Management.Views
         {
             HelpWindow helpWindow = new HelpWindow();
             helpWindow.Show();
+            this.Hide();
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)

@@ -112,3 +112,4 @@ namespace Money_Management.Views
         public string Notes { get; set; }
     }
 }
+

@@ -219,7 +219,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\dashboard window.jpeg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\wallet-top-coins-with-copy-space_23-2148285285.jpg" />
   </ItemGroup>

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/wallet-top-coins-with-copy-space_23-2148285285.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("views/dashboard%20window.jpeg")]
 
 

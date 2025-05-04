@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:Money_Management.Views"
         mc:Ignorable="d"
         Title="HelpWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
-</Window>
+    
+        <ScrollViewer Padding="20">
+            <StackPanel>
+            <TextBlock FontSize="18" FontWeight="Bold" Margin="0 0 0 10">Smart Goal Tracker - Help</TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Margin="0 0 0 30">
+                Welcome to the Smart Goal Tracker! Here's how to get started:
+                </TextBlock>
+
+                <TextBlock TextWrapping="Wrap" Text="• Dashboard: Navigate to Budget, Income, Expenses, and Goals." Margin="100 0 0 50"/>
+                <TextBlock TextWrapping="Wrap" Text="• Income: Add or edit your income entries by amount and source." Margin="100 0 0 50"/>
+                <TextBlock TextWrapping="Wrap" Text="• Expenses: Track your expenses by category and amount." Margin="100 0 0 50"/>
+                <TextBlock TextWrapping="Wrap" Text="• Budget: Set goals and track how you're doing financially." Margin="100 0 0 50"/>
+                <TextBlock TextWrapping="Wrap" Text="• Goals: Define savings or budgeting goals to stay motivated." Margin="100 0 0 50"/>
+
+                <TextBlock TextWrapping="Wrap" Margin="20 10 0 100" FontStyle="Italic">
+                Need further assistance? Contact - 0332297411
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Window>
