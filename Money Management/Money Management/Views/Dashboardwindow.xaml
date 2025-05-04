@@ -12,7 +12,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
+        
         <StackPanel Grid.Row="1" Grid.Column="0" Background="DarkGray" Width="220" VerticalAlignment="Stretch">
             <Grid Background="DarkGray" Height="90">
                 <Image Source="/Images/icon.png" Width="60" Height="60" Margin="74,-65,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
@@ -29,7 +29,7 @@
             <Button Content="Help" Width="200" Height="50" Click="HelpButton_Click" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="16"/>
         </StackPanel>
 
-        <!-- Top Bar -->
+        
         <Grid Grid.Row="0" Grid.Column="1" Background="LightGray" Height="70">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -43,7 +43,7 @@
             <Image Grid.Column="3" Width="40" Height="40" Source="/Images/profile.png" Margin="10" MouseLeftButtonDown="ProfileImage_Click"/>
         </Grid>
 
-        <!-- Main Content Area -->
+        
         <Grid Grid.Row="1" Grid.Column="1" Margin="10">
             <Grid.Background>
                 <ImageBrush ImageSource="/Views/dashboard window.jpeg"/>
@@ -55,7 +55,6 @@
 
             
 
-            <!-- Placeholder for future content, if needed -->
         </Grid>
     </Grid>
 </Window>

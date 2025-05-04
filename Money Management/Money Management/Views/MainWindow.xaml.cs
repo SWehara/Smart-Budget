@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using Microsoft.Win32;  // For file dialog
+using Microsoft.Win32;  
 
 namespace Money_Management.Views
 {
@@ -11,7 +11,7 @@ namespace Money_Management.Views
             InitializeComponent();
         }
 
-        // Event handler for the Upload button
+        
         private void UploadButton_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
@@ -27,7 +27,7 @@ namespace Money_Management.Views
             }
         }
 
-        // ✅ Corrected method name and added password length validation
+        
         private void ProceedButton1_Click(object sender, RoutedEventArgs e)
         {
             string name = NameTextBox1.Text;
@@ -45,7 +45,7 @@ namespace Money_Management.Views
                 return;
             }
 
-            // Proceed to dashboard
+            
             DashboardWindow dashboardWindow = new DashboardWindow();
             dashboardWindow.Show();
             this.Close();

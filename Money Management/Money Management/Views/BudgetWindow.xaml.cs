@@ -35,13 +35,13 @@ namespace Money_Management.Views
             }
         }
 
-        // ✅ Corrected constructor name
+        
         public BudgetWindow()
         {
             InitializeComponent();
             DataContext = this;
 
-            // Example mock data
+           
             Categories.Add(new BudgetCategory { Name = "Food", Limit = 3000, Spent = 2200 });
             Categories.Add(new BudgetCategory { Name = "Transport", Limit = 1500, Spent = 1700 });
             Categories.Add(new BudgetCategory { Name = "Eating Out", Limit = 2000, Spent = 1800 });

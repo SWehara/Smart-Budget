@@ -9,12 +9,11 @@ public class Goal
     public DateTime TargetDate { get; set; }
     public bool IsCompleted { get; set; }
 
-    // Read-only Progress property
     public double Progress
     {
         get
         {
-            // Temporary logic: mark 100% if completed
+            
             return IsCompleted ? 100 : 0;
         }
     }

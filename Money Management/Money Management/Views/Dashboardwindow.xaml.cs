@@ -30,17 +30,15 @@ namespace Money_Management.Views
 
         private void BudgetButton_Click(object sender, RoutedEventArgs e)
         {
-            // Create an instance of the BudgetWindow
+            
             BudgetWindow budgetWindow = new BudgetWindow();
 
-            // Set BudgetWindow as the main window
-            Application.Current.MainWindow = budgetWindow;
 
-            // Hide the Dashboard window
+            budgetWindow.Show();
+
             this.Hide();
 
-            // Show the BudgetWindow
-            budgetWindow.Show();
+           
         }
 
         private void GoalsButton_Click(object sender, RoutedEventArgs e)

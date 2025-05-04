@@ -12,10 +12,10 @@ namespace Money_Management.Views
         public ObservableCollection<IncomeEntry> IncomeEntries { get; set; }
         private DashboardWindow _dashboardWindow;
 
-        // Track selected item for editing
+        
         private IncomeEntry selectedEntry = null;
 
-        // Constructor that accepts the DashboardWindow
+        
         public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Money_Management.Views
             InitializeIncomeWindow();
         }
 
-        // Optional: You can remove this if you want to avoid using it without DashboardWindow
+        
         public IncomeWindow()
         {
             InitializeComponent();
@@ -38,14 +38,14 @@ namespace Money_Management.Views
             LoadDefaultSources();
         }
 
-        // Load default income sources into the ComboBox
+        
         private void LoadDefaultSources()
         {
             IncomeSourceComboBox.ItemsSource = new string[] { "Salary", "Freelance", "Gift", "Interest", "Other" };
             IncomeSourceComboBox.SelectedIndex = 0;
         }
 
-        // Set or update income
+        
         private void SetIncomeButton_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(IncomeAmountTextBox.Text) || IncomeSourceComboBox.SelectedItem == null)
@@ -64,7 +64,7 @@ namespace Money_Management.Views
 
             if (selectedEntry != null)
             {
-                // Update existing entry
+                
                 selectedEntry.Amount = amount;
                 selectedEntry.Source = IncomeSourceComboBox.Text;
                 IncomeDataGrid.Items.Refresh();
@@ -75,7 +75,7 @@ namespace Money_Management.Views
             }
             else
             {
-                // Add new entry
+                
                 var newEntry = new IncomeEntry
                 {
                     Source = IncomeSourceComboBox.Text,
@@ -93,27 +93,27 @@ namespace Money_Management.Views
             ClearForm();
         }
 
-        // Update the total income display
+        
         private void UpdateTotalIncome()
         {
             var totalIncome = IncomeEntries.Sum(entry => entry.Amount);
             CurrentIncomeTextBlock.Text = $"Rs. {totalIncome}";
         }
 
-        // Clear form inputs
+        
         private void ClearForm()
         {
             IncomeAmountTextBox.Clear();
             IncomeSourceComboBox.SelectedIndex = 0;
         }
 
-        // Back button
+        
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (_dashboardWindow != null)
             {
-                _dashboardWindow.Show(); // Show the dashboard again
-                this.Close();            // Close the income window
+                _dashboardWindow.Show(); 
+                this.Close();            
             }
             else
             {
@@ -121,7 +121,7 @@ namespace Money_Management.Views
             }
         }
 
-        // Edit button
+        
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.DataContext is IncomeEntry entry)
@@ -133,7 +133,7 @@ namespace Money_Management.Views
             }
         }
 
-        // Delete button
+        
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.DataContext is IncomeEntry entry)
@@ -143,7 +143,7 @@ namespace Money_Management.Views
             }
         }
 
-        // Income entry model
+        
         public class IncomeEntry
         {
             public DateTime Date { get; set; } = DateTime.Now;

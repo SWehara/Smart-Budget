@@ -11,12 +11,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Back Button -->
+       
         <Button Content="← Back" Width="100" Height="35"
                 HorizontalAlignment="Left"
                 Click="BackButton_Click" />
 
-        <!-- Main Content -->
+       
         <Grid Grid.Row="1" Margin="0,20,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -26,18 +26,18 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <!-- Title -->
+            
             <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#4CAF50"
                        Margin="0,0,0,20" Grid.Row="0"/>
 
-            <!-- Monthly Income -->
+           
             <StackPanel Orientation="Horizontal" Margin="0,0,0,20" Grid.Row="1">
                 <TextBlock Text="Monthly Income (Rs):" FontSize="16" Width="200"/>
                 <TextBox x:Name="IncomeInput" Width="200" Margin="10,0"/>
                 <Button Content="Set Income" Width="120" Click="SetIncome_Click"/>
             </StackPanel>
 
-            <!-- Budget Categories -->
+            
             <GroupBox Header="Budget Categories" Foreground="White" Margin="0,0,0,20" Grid.Row="2">
                 <StackPanel>
                     <DataGrid x:Name="CategoryDataGrid" ItemsSource="{Binding Categories}" AutoGenerateColumns="False"
@@ -56,7 +56,7 @@
                 </StackPanel>
             </GroupBox>
 
-            <!-- Summary and Goals -->
+            
             <StackPanel Grid.Row="3">
                 <GroupBox Header="Financial Goals" Foreground="White" Margin="0,0,0,20">
                     <ItemsControl ItemsSource="{Binding Goals}" Margin="10">
@@ -81,7 +81,7 @@
                 </GroupBox>
             </StackPanel>
 
-            <!-- Remaining Summary and Alerts -->
+            
             <StackPanel Grid.Row="4">
                 <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="LightGreen" Margin="0,0,0,10"/>
                 <TextBlock Text="⚠️ Eating Out: 85% of budget used" Foreground="OrangeRed"/>
