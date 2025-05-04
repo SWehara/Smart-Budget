@@ -15,6 +15,7 @@ namespace Money_Management.Views
         // Track selected item for editing
         private IncomeEntry selectedEntry = null;
 
+        // Constructor that accepts the DashboardWindow
         public IncomeWindow(DashboardWindow dashboardWindow)
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Money_Management.Views
             InitializeIncomeWindow();
         }
 
+        // Optional: You can remove this if you want to avoid using it without DashboardWindow
         public IncomeWindow()
         {
             InitializeComponent();
@@ -111,7 +113,15 @@ namespace Money_Management.Views
         // Back button
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            if (_dashboardWindow != null)
+            {
+                _dashboardWindow.Show(); // Show the dashboard again
+                this.Close();            // Close the income window
+            }
+            else
+            {
+                MessageBox.Show("Dashboard reference is missing.", "Navigation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         // Edit button
