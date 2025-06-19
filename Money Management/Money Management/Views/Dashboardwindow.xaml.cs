@@ -32,19 +32,16 @@ namespace Money_Management.Views
         {
             
             BudgetWindow budgetWindow = new BudgetWindow();
-
-
             budgetWindow.Show();
-
             this.Hide();
-
-           
         }
 
         private void GoalsButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            MessageBox.Show("Goals button clicked.");
+
+            GoalsWindow goalsWindow = new GoalsWindow();
+            goalsWindow.Show();
+            this.Hide();
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)

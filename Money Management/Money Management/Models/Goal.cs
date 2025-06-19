@@ -1,20 +1,14 @@
-﻿using System;
+﻿using Microsoft.VisualBasic; // for InputBox to work
 
-public class Goal
+
+namespace Money_Management.Models
 {
-    public int Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public string Category { get; set; } = string.Empty;
-    public DateTime TargetDate { get; set; }
-    public bool IsCompleted { get; set; }
-
-    public double Progress
+    public class Goal
     {
-        get
-        {
-            
-            return IsCompleted ? 100 : 0;
-        }
+        public string Name { get; set; }
+        public decimal Target { get; set; }
+        public string DueDate { get; set; }  // You can use DateTime if you prefer
+        public decimal Progress { get; set; }
+        public string Status { get; set; }
     }
 }

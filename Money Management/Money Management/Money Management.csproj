@@ -116,9 +116,7 @@
     </ApplicationDefinition>
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\FinancialGoal.cs" />
     <Compile Include="Models\Goal.cs" />
-    <Compile Include="Models\GoalRepository.cs" />
     <Compile Include="ViewModels\BudgetViewModel.cs" />
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\ExpensesViewModel.cs" />
@@ -128,6 +126,9 @@
     </Compile>
     <Compile Include="Views\ExpensesWindow.xaml.cs">
       <DependentUpon>ExpensesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GoalsWindow.xaml.cs">
+      <DependentUpon>GoalsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HelpWindow.xaml.cs">
       <DependentUpon>HelpWindow.xaml</DependentUpon>
@@ -153,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ExpensesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GoalsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

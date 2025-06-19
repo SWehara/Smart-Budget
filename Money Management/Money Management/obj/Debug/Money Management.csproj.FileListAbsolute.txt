@@ -71,3 +71,5 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\RegisterWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\RegisterWindow.g.cs
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\GoalsWindow.baml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\GoalsWindow.g.cs
