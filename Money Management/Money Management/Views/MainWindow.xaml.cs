@@ -83,5 +83,15 @@ namespace Money_Management.Views
                 }
             }
         }
+                
+
+private void OpenRegisterWindow_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterWindow register = new RegisterWindow();
+            register.ShowDialog();
+        }
+
     }
 }
+   
+
