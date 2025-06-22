@@ -1,29 +1,86 @@
 ﻿<Window x:Class="Money_Management.Views.HelpWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Money_Management.Views"
-        mc:Ignorable="d"
-        Title="HelpWindow" Height="450" Width="800">
-    
-        <ScrollViewer Padding="20">
+        Title="Help" Height="500" Width="800"
+        Background="#1E1E2F" WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="30">
             <StackPanel>
-            <TextBlock FontSize="18" FontWeight="Bold" Margin="0 0 0 10">Smart Goal Tracker - Help</TextBlock>
 
-                <TextBlock TextWrapping="Wrap" Margin="0 0 0 30">
-                Welcome to the Smart Goal Tracker! Here's how to get started:
+               
+                <DockPanel Margin="0,0,0,20">
+                    <Button Content="← Back" Width="100" Height="30" Click="BackButton_Click"
+                            Background="#4CAF50" Foreground="White" BorderThickness="0"
+                            HorizontalAlignment="Left" />
+                    <TextBlock Text="Help &amp; Getting Started" FontSize="28" FontWeight="Bold"
+           Foreground="#4CAF50" HorizontalAlignment="Center"
+           VerticalAlignment="Center" Margin="0,0,0,20"/>
+
+
+
+                </DockPanel>
+
+                
+                <TextBlock Foreground="White" FontSize="14" TextWrapping="Wrap" Margin="0,0,0,20">
+                    Welcome to the Smart Goal Tracker! Here's how you can get started and make the most of your dashboard.
                 </TextBlock>
 
-                <TextBlock TextWrapping="Wrap" Text="• Dashboard: Navigate to Budget, Income, Expenses, and Goals." Margin="100 0 0 50"/>
-                <TextBlock TextWrapping="Wrap" Text="• Income: Add or edit your income entries by amount and source." Margin="100 0 0 50"/>
-                <TextBlock TextWrapping="Wrap" Text="• Expenses: Track your expenses by category and amount." Margin="100 0 0 50"/>
-                <TextBlock TextWrapping="Wrap" Text="• Budget: Set goals and track how you're doing financially." Margin="100 0 0 50"/>
-                <TextBlock TextWrapping="Wrap" Text="• Goals: Define savings or budgeting goals to stay motivated." Margin="100 0 0 50"/>
+                
+                <Border Background="#2E2E3E" CornerRadius="10" Padding="15" Margin="0,10,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="" FontSize="20" Foreground="#4CAF50" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="Dashboard" FontSize="16" FontWeight="SemiBold" Foreground="#4CAF50"/>
+                            <TextBlock Text="Navigate to Budget, Income, Expenses, and Goals." TextWrapping="Wrap" Foreground="White" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
 
-                <TextBlock TextWrapping="Wrap" Margin="20 10 0 100" FontStyle="Italic">
-                Need further assistance? Contact - 0332297411
-                </TextBlock>
+                <Border Background="#2E2E3E" CornerRadius="10" Padding="15" Margin="0,10,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="" FontSize="20" Foreground="#4CAF50" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="Income" FontSize="16" FontWeight="SemiBold" Foreground="#4CAF50"/>
+                            <TextBlock Text="Add or edit your income entries by amount and source." TextWrapping="Wrap" Foreground="White" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#2E2E3E" CornerRadius="10" Padding="15" Margin="0,10,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="" FontSize="20" Foreground="#4CAF50" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="Expenses" FontSize="16" FontWeight="SemiBold" Foreground="#4CAF50"/>
+                            <TextBlock Text="Track your expenses by category and amount." TextWrapping="Wrap" Foreground="White" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#2E2E3E" CornerRadius="10" Padding="15" Margin="0,10,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="" FontSize="20" Foreground="#4CAF50" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="Budget" FontSize="16" FontWeight="SemiBold" Foreground="#4CAF50"/>
+                            <TextBlock Text="Set monthly budgets to monitor your spending." TextWrapping="Wrap" Foreground="White" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#2E2E3E" CornerRadius="10" Padding="15" Margin="0,10,0,10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets" Text="" FontSize="20" Foreground="#4CAF50" Margin="0,0,10,0"/>
+                        <StackPanel>
+                            <TextBlock Text="Goals" FontSize="16" FontWeight="SemiBold" Foreground="#4CAF50"/>
+                            <TextBlock Text="Define savings goals and track progress over time." TextWrapping="Wrap" Foreground="White" Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <TextBlock Text="Need further assistance?   admin@gmail.com"
+                           Foreground="LightGray" FontStyle="Italic" Margin="0,30,0,0" FontSize="12"/>
             </StackPanel>
         </ScrollViewer>
-    </Window>
+    </Grid>
+</Window>

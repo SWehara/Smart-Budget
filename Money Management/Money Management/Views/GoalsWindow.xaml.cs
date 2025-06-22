@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using Money_Management.Models;
 using MySql.Data.MySqlClient;
 
 namespace Money_Management.Views
 {
     public partial class GoalsWindow : Window
     {
-        public GoalsWindow()
+        private string currentUsername;
+        private string connectionString = "server=localhost;user id=root;password=@12345$Sw;database=smartgoaldb";
+
+        public GoalsWindow(string username)
         {
             InitializeComponent();
+            currentUsername = username;
             LoadGoals();
         }
 
-        private string connectionString = "server=localhost;user id=root;password=@12345$Sw;database=smartgoaldb";
-
-        // Class to represent a goal
         public class Goal
         {
             public string Name { get; set; }
@@ -50,9 +50,10 @@ namespace Money_Management.Views
                 using (var conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string insertQuery = "INSERT INTO goals (name, target_amount, due_date, progress) VALUES (@name, @target, @dueDate, 0)";
+                    string insertQuery = "INSERT INTO goals (username, name, target_amount, due_date, progress) VALUES (@username, @name, @target, @dueDate, 0)";
                     using (var cmd = new MySqlCommand(insertQuery, conn))
                     {
+                        cmd.Parameters.AddWithValue("@username", currentUsername);
                         cmd.Parameters.AddWithValue("@name", name);
                         cmd.Parameters.AddWithValue("@target", targetAmount);
                         cmd.Parameters.AddWithValue("@dueDate", dueDate.Value.ToString("yyyy-MM-dd"));
@@ -61,7 +62,7 @@ namespace Money_Management.Views
                 }
 
                 GoalMessageTextBlock.Text = "Goal created successfully!";
-                LoadGoals(); // Refresh list
+                LoadGoals();
             }
             catch (Exception ex)
             {
@@ -78,24 +79,28 @@ namespace Money_Management.Views
                 using (var conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT name, target_amount, due_date, progress FROM goals";
+                    string query = "SELECT name, target_amount, due_date, progress FROM goals WHERE username = @username";
                     using (var cmd = new MySqlCommand(query, conn))
-                    using (var reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
-                        {
-                            var target = reader.GetDecimal("target_amount");
-                            var progress = reader.GetDecimal("progress");
-                            var status = progress >= target ? "Completed" : "In Progress";
+                        cmd.Parameters.AddWithValue("@username", currentUsername);
 
-                            goalList.Add(new Goal
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
                             {
-                                Name = reader.GetString("name"),
-                                Target = target,
-                                DueDate = Convert.ToDateTime(reader["due_date"]).ToShortDateString(),
-                                Progress = progress,
-                                Status = status
-                            });
+                                var target = reader.GetDecimal("target_amount");
+                                var progress = reader.GetDecimal("progress");
+                                var status = progress >= target ? "Completed" : "In Progress";
+
+                                goalList.Add(new Goal
+                                {
+                                    Name = reader.GetString("name"),
+                                    Target = target,
+                                    DueDate = Convert.ToDateTime(reader["due_date"]).ToShortDateString(),
+                                    Progress = progress,
+                                    Status = status
+                                });
+                            }
                         }
                     }
                 }
@@ -110,11 +115,10 @@ namespace Money_Management.Views
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            DashboardWindow dashboard = new DashboardWindow();
+            DashboardWindow dashboard = new DashboardWindow(currentUsername);
             dashboard.Show();
             this.Close();
         }
-
 
         private void AddProgressButton_Click(object sender, RoutedEventArgs e)
         {
@@ -136,23 +140,25 @@ namespace Money_Management.Views
                 using (var conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string updateQuery = "UPDATE goals SET progress = progress + @amount WHERE name = @name";
+                    string updateQuery = "UPDATE goals SET progress = progress + @amount WHERE username = @username AND name = @name";
                     using (var cmd = new MySqlCommand(updateQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@amount", amount);
+                        cmd.Parameters.AddWithValue("@username", currentUsername);
                         cmd.Parameters.AddWithValue("@name", goalName);
                         cmd.ExecuteNonQuery();
                     }
                 }
 
                 GoalMessageTextBlock.Text = $"Added Rs. {amount} to '{goalName}'";
-                LoadGoals(); // Refresh UI
+                LoadGoals();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error updating progress: " + ex.Message);
             }
         }
+
         private void EditGoalButton_Click(object sender, RoutedEventArgs e)
         {
             var goal = (sender as FrameworkElement).DataContext as Goal;
@@ -167,10 +173,11 @@ namespace Money_Management.Views
                     using (var conn = new MySqlConnection(connectionString))
                     {
                         conn.Open();
-                        string updateQuery = "UPDATE goals SET target_amount = @target WHERE name = @name";
+                        string updateQuery = "UPDATE goals SET target_amount = @target WHERE username = @username AND name = @name";
                         using (var cmd = new MySqlCommand(updateQuery, conn))
                         {
                             cmd.Parameters.AddWithValue("@target", newTarget);
+                            cmd.Parameters.AddWithValue("@username", currentUsername);
                             cmd.Parameters.AddWithValue("@name", goal.Name);
                             cmd.ExecuteNonQuery();
                         }
@@ -188,7 +195,8 @@ namespace Money_Management.Views
                 MessageBox.Show("Invalid input.");
             }
         }
-            private void DeleteGoalButton_Click(object sender, RoutedEventArgs e)
+
+        private void DeleteGoalButton_Click(object sender, RoutedEventArgs e)
         {
             var goal = (sender as FrameworkElement).DataContext as Goal;
 
@@ -202,9 +210,10 @@ namespace Money_Management.Views
                     using (var conn = new MySqlConnection(connectionString))
                     {
                         conn.Open();
-                        string deleteQuery = "DELETE FROM goals WHERE name = @name";
+                        string deleteQuery = "DELETE FROM goals WHERE username = @username AND name = @name";
                         using (var cmd = new MySqlCommand(deleteQuery, conn))
                         {
+                            cmd.Parameters.AddWithValue("@username", currentUsername);
                             cmd.Parameters.AddWithValue("@name", goal.Name);
                             cmd.ExecuteNonQuery();
                         }
@@ -218,9 +227,6 @@ namespace Money_Management.Views
                 }
             }
         }
-
     }
-
 }
-
 

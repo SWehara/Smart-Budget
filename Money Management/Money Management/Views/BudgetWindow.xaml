@@ -1,9 +1,10 @@
 ﻿<Window x:Class="Money_Management.Views.BudgetWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
         Title="Budget" Height="600" Width="900"
         Background="#1E1E2F" WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize">
 
     <Grid Margin="20">
         <Grid.RowDefinitions>
@@ -11,81 +12,76 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-       
-        <Button Content="← Back" Width="100" Height="35"
-                HorizontalAlignment="Left"
-                Click="BackButton_Click" />
+        <Button Content="← Back" Width="100" Height="35" Margin="0,0,0,10"
+                HorizontalAlignment="Left" Click="BackButton_Click" />
 
-       
-        <Grid Grid.Row="1" Margin="0,20,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.3*"/>
+                <ColumnDefinition Width="2.7*"/>
+            </Grid.ColumnDefinitions>
 
-            
-            <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#4CAF50"
-                       Margin="0,0,0,20" Grid.Row="0"/>
+            <!-- Left Panel -->
+            <StackPanel Grid.Column="0" Margin="10">
+                <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#4CAF50" Margin="0,0,0,20"/>
 
-           
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,20" Grid.Row="1">
-                <TextBlock Text="Monthly Income (Rs):" FontSize="16" Width="200"/>
-                <TextBox x:Name="IncomeInput" Width="200" Margin="10,0"/>
-                <Button Content="Set Income" Width="120" Click="SetIncome_Click"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBlock Text="Month:" Foreground="White" Width="50" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="MonthComboBox" Width="120" SelectionChanged="MonthYear_Changed"/>
+                    <TextBlock Text="Year:" Foreground="White" Width="40" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="YearComboBox" Width="100" SelectionChanged="MonthYear_Changed"/>
+                </StackPanel>
+
+                <TextBlock Text="Monthly Income:" Foreground="White"/>
+                <TextBox x:Name="IncomeInput" IsReadOnly="True" Width="250" Margin="0,0,0,10"
+                         Background="#EEE" Text="{Binding MonthlyIncome}"/>
+
+                <TextBlock Text="New Category:" Foreground="White"/>
+                <TextBox x:Name="CategoryNameBox" Width="250" Margin="0,0,0,5"/>
+
+                <TextBlock Text="Set Limit (Rs.):" Foreground="White"/>
+                <TextBox x:Name="CategoryLimitBox" Width="250" Margin="0,0,0,10"/>
+
+                <Button Content="Add Category" Width="250" Click="AddCategory_Click"/>
+                <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="LightGreen" Margin="0,20,0,0"/>
             </StackPanel>
 
-            
-            <GroupBox Header="Budget Categories" Foreground="White" Margin="0,0,0,20" Grid.Row="2">
-                <StackPanel>
-                    <DataGrid x:Name="CategoryDataGrid" ItemsSource="{Binding Categories}" AutoGenerateColumns="False"
-                              Height="150" CanUserAddRows="False"
-                              Background="White" Foreground="Black" Margin="5">
+            <!-- Right Panel -->
+            <StackPanel Grid.Column="1" Margin="10">
+                <GroupBox Header="Budget Categories" Foreground="White">
+                    <DataGrid x:Name="CategoryDataGrid"
+                              ItemsSource="{Binding Categories}"
+                              AutoGenerateColumns="False"
+                              Height="200"
+                              CanUserAddRows="False"
+                              Background="White"
+                              Foreground="Black"
+                              CellEditEnding="CategoryDataGrid_CellEditEnding"
+                              Margin="5">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding WarningLevel}" Value="Over">
+                                        <Setter Property="Background" Value="#FFCDD2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding WarningLevel}" Value="Near">
+                                        <Setter Property="Background" Value="#FFF9C4"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.Resources>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Category" Binding="{Binding Name}" Width="*" />
-                            <DataGridTextColumn Header="Limit (Rs.)" Binding="{Binding Limit}" Width="*" />
-                            <DataGridTextColumn Header="Spent (Rs.)" Binding="{Binding Spent}" Width="*" />
-                            <DataGridTextColumn Header="Remaining (Rs.)" Binding="{Binding Remaining}" Width="*" />
+                            <DataGridTextColumn Header="Category" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Limit" Binding="{Binding Limit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
+                            <DataGridTextColumn Header="Spent" Binding="{Binding Spent}" Width="*"/>
+                            <DataGridTextColumn Header="Remaining" Binding="{Binding Remaining}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                        <Button Content="+ Add Category" Width="130" Click="AddCategory_Click"/>
-                    </StackPanel>
-                </StackPanel>
-            </GroupBox>
-
-            
-            <StackPanel Grid.Row="3">
-                <GroupBox Header="Financial Goals" Foreground="White" Margin="0,0,0,20">
-                    <ItemsControl ItemsSource="{Binding Goals}" Margin="10">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,5">
-                                    <TextBlock Text="{Binding Title}" FontWeight="SemiBold"/>
-                                    <ProgressBar Value="{Binding Progress}" Height="20" Margin="0,5,0,0"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
                 </GroupBox>
 
-                <GroupBox Header="Spending Distribution" Foreground="White" Margin="0,0,0,20">
-                    <Grid Height="150">
-                        <TextBlock Text="[Pie Chart Visualization Here]"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Foreground="Gray"/>
-                    </Grid>
+                <GroupBox Header="Spending Distribution" Foreground="White" Height="240">
+                    <oxy:PlotView x:Name="PieChartView" Height="220" Margin="5"/>
                 </GroupBox>
-            </StackPanel>
-
-            
-            <StackPanel Grid.Row="4">
-                <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="LightGreen" Margin="0,0,0,10"/>
-                <TextBlock Text="⚠️ Eating Out: 85% of budget used" Foreground="OrangeRed"/>
-                <TextBlock Text="❗ Transport: Over budget!" Foreground="Red"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -38,8 +38,8 @@
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Bill Reminders" Grid.Column="1" Width="100" Height="40" Margin="10" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="14"/>
-            <Button Content="Weekly Report" Grid.Column="2" Width="100" Height="40" Margin="10" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="14"/>
+            <Button Content="Month Report" Grid.Column="1" Width="100" Height="40" Margin="10" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="14"/>
+            <Button Content="Profile" Grid.Column="2" Width="120" Height="40" Margin="10" Background="Transparent" BorderThickness="1" BorderBrush="Black" Foreground="Black" FontSize="14"/>
             <Image Grid.Column="3" Width="40" Height="40" Source="/Images/profile.png" Margin="10" MouseLeftButtonDown="ProfileImage_Click"/>
         </Grid>
 

@@ -6,60 +6,60 @@ namespace Money_Management.Views
     public partial class DashboardWindow : Window
     {
         private DashboardViewModel viewModel;
+        private string currentUsername;
 
-        public DashboardWindow()
+        public DashboardWindow(string username)
         {
             InitializeComponent();
+            currentUsername = username;
             viewModel = new DashboardViewModel();
             this.DataContext = viewModel;
         }
 
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            IncomeWindow incomeWindow = new IncomeWindow(this);
+            IncomeWindow incomeWindow = new IncomeWindow(currentUsername);
             incomeWindow.Show();
             this.Hide();
         }
 
         private void ExpensesButton_Click(object sender, RoutedEventArgs e)
         {
-            ExpensesWindow expensesWindow = new ExpensesWindow(this);
+            ExpensesWindow expensesWindow = new ExpensesWindow(currentUsername);
             expensesWindow.Show();
             this.Hide();
         }
 
         private void BudgetButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            BudgetWindow budgetWindow = new BudgetWindow();
+            BudgetWindow budgetWindow = new BudgetWindow(currentUsername);
             budgetWindow.Show();
             this.Hide();
         }
 
         private void GoalsButton_Click(object sender, RoutedEventArgs e)
         {
-
-            GoalsWindow goalsWindow = new GoalsWindow();
+            GoalsWindow goalsWindow = new GoalsWindow(currentUsername);
             goalsWindow.Show();
             this.Hide();
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            HelpWindow helpWindow = new HelpWindow();
+            HelpWindow helpWindow = new HelpWindow(currentUsername);
             helpWindow.Show();
             this.Hide();
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow settingsWindow = new SettingsWindow();
+            SettingsWindow settingsWindow = new SettingsWindow(currentUsername);
             settingsWindow.Show();
         }
 
         private void ProfileImage_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            Profilewindow profileWindow = new Profilewindow();
+            Profilewindow profileWindow = new Profilewindow(currentUsername);
             profileWindow.Show();
             this.Close();
         }

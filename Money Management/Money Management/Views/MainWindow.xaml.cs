@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using Microsoft.Win32;
-using MySql.Data.MySqlClient; 
+using MySql.Data.MySqlClient;
 
 namespace Money_Management.Views
 {
@@ -29,12 +29,12 @@ namespace Money_Management.Views
 
         private void ProceedButton1_Click(object sender, RoutedEventArgs e)
         {
-            string name = NameTextBox1.Text.Trim();
+            string username = NameTextBox1.Text.Trim();
             string password = PasswordBox1.Password;
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both name and password.", "Missing Information", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -44,9 +44,9 @@ namespace Money_Management.Views
                 return;
             }
 
-            if (IsValidUser(name, password))
+            if (IsValidUser(username, password))
             {
-                DashboardWindow dashboardWindow = new DashboardWindow();
+                DashboardWindow dashboardWindow = new DashboardWindow(username);
                 dashboardWindow.Show();
                 this.Close();
             }
@@ -83,15 +83,11 @@ namespace Money_Management.Views
                 }
             }
         }
-                
 
-private void OpenRegisterWindow_Click(object sender, RoutedEventArgs e)
+        private void OpenRegisterWindow_Click(object sender, RoutedEventArgs e)
         {
             RegisterWindow register = new RegisterWindow();
             register.ShowDialog();
         }
-
     }
 }
-   
-

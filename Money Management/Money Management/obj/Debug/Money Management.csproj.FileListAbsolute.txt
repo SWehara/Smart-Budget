@@ -73,3 +73,9 @@ D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\M
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\RegisterWindow.g.cs
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\GoalsWindow.baml
 D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\obj\Debug\Views\GoalsWindow.g.cs
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.dll
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.Wpf.dll
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.Wpf.Shared.dll
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.xml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.Wpf.xml
+D:\Downloads\Project File\application-development-ca1-SWehara\Money Management\Money Management\bin\Debug\OxyPlot.Wpf.Shared.xml

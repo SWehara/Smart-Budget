@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace Money_Management.Views
 {
-    /// <summary>
-    /// Interaction logic for ReportsWindow.xaml
-    /// </summary>
+    
     public partial class ReportsWindow : Window
     {
         public ReportsWindow()
