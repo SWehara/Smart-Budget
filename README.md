@@ -44,7 +44,7 @@ Documenting Final Features
 - Add and manage monthly budget categories
 - Set category limits manually
 - Real-time update of ‘Spent’ based on expenses
-- Warnings when limits are exceeded or nearly reached (Highliting the row)
+- Warnings when limits are exceeded or nearly reached (Highliting the row yellow when spendings near to budget, Highliting the row red when user exceeds the budget)
 - Pie chart visualization using OxyPlot
 
 5. Expenses
@@ -72,4 +72,4 @@ Documenting Final Features
 - View and Edit personal information like email and phone number
 
 
-
+Watch the demo video here (https://drive.google.com/file/d/1DY7cTFydmDnMsQG12mpWQF1shWW6Zi9y/view?usp=drive_link)
