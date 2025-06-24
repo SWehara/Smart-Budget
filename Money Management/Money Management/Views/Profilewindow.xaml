@@ -52,7 +52,7 @@
         </StackPanel>
 
         
-        <Button Content="Save Changes" Grid.Row="1" Width="150" Height="35" HorizontalAlignment="Left" Click="SaveButton_Click" Background="#4CAF50" Foreground="White" FontWeight="Bold" Margin="373,296,0,78"/>
+        <Button Content="Save Changes" Grid.Row="1" Width="150" Height="35" HorizontalAlignment="Center" Click="SaveButton_Click" Background="#4CAF50" Foreground="White" FontWeight="Bold" Margin="130,296,0,78"/>
         <Button Content="Logout"
         Width="100" Height="35"
         HorizontalAlignment="Right"
