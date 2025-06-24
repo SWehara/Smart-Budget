@@ -1,0 +1,2 @@
+- Reduced peak memory usage when generating PDF files by properly implementing a stream-based API,
+- Fixed the exception message displayed when the library cannot successfully parse the provided text as a color.

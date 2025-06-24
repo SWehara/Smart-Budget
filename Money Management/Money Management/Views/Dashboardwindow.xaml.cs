@@ -6,65 +6,73 @@ namespace Money_Management.Views
     public partial class DashboardWindow : Window
     {
         private DashboardViewModel viewModel;
+        private string currentUsername;
 
-        public DashboardWindow()
+        public DashboardWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+            currentUsername = username;
             viewModel = new DashboardViewModel();
             this.DataContext = viewModel;
+
+            GreetingTextBlock.Text = $"Welcome back, {currentUsername}";
         }
 
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
         {
-            IncomeWindow incomeWindow = new IncomeWindow(this);
+            IncomeWindow incomeWindow = new IncomeWindow(currentUsername);
             incomeWindow.Show();
             this.Hide();
         }
 
         private void ExpensesButton_Click(object sender, RoutedEventArgs e)
         {
-            ExpensesWindow expensesWindow = new ExpensesWindow(this);
+            ExpensesWindow expensesWindow = new ExpensesWindow(currentUsername);
             expensesWindow.Show();
             this.Hide();
         }
 
         private void BudgetButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            BudgetWindow budgetWindow = new BudgetWindow();
-
-
+            BudgetWindow budgetWindow = new BudgetWindow(currentUsername);
             budgetWindow.Show();
-
             this.Hide();
-
-           
         }
 
         private void GoalsButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            MessageBox.Show("Goals button clicked.");
+            GoalsWindow goalsWindow = new GoalsWindow(currentUsername);
+            goalsWindow.Show();
+            this.Hide();
         }
 
         private void HelpButton_Click(object sender, RoutedEventArgs e)
         {
-            HelpWindow helpWindow = new HelpWindow();
+            HelpWindow helpWindow = new HelpWindow(currentUsername);
             helpWindow.Show();
             this.Hide();
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow settingsWindow = new SettingsWindow();
+            SettingsWindow settingsWindow = new SettingsWindow(currentUsername);
             settingsWindow.Show();
+            this.Close();
         }
 
-        private void ProfileImage_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            Profilewindow profileWindow = new Profilewindow();
+            ProfileWindow profileWindow = new ProfileWindow(currentUsername);
             profileWindow.Show();
             this.Close();
+        }
+
+        private void MonthReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReportsWindow reportsWindow = new ReportsWindow(currentUsername);
+            reportsWindow.Show();
+            this.Hide();
         }
 
         public void UpdateIncome(double amount)
