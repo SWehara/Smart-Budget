@@ -1,59 +1,65 @@
 ﻿<Window x:Class="Money_Management.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Height="450" Width="750" WindowStartupLocation="CenterScreen"
-        Title="Smart Goal Manager" ResizeMode="CanResize">
+        Title="My Smart Budget"
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Background="#1E1E2F">
+
     <Grid>
         
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Views/image.png" Stretch="Fill"/>
+        </Grid.Background>
 
         
-        <Rectangle Grid.RowSpan="2">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/Views/wallet-top-coins-with-copy-space_23-2148285285.jpg"/>
-            </Rectangle.Fill>
-        </Rectangle>
+        <TextBlock Text="My Smart Budget"
+                   FontSize="48"
+                   FontWeight="Bold"
+                   FontFamily="Segoe UI"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Margin="0,60,0,0"/>
 
         
-        <TextBlock Grid.Row="0" Text="Smart Goal Manager"
-                   FontSize="46" FontWeight="SemiBold"
-                   Foreground="White" HorizontalAlignment="Center"
-                   Margin="0,70,0,10"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,30,0,0" Width="360">
+            <TextBlock Text="Welcome !" FontSize="26" FontWeight="Bold"
+                       Foreground="#4CAF50" HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
-       
-        <Border Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" CornerRadius="20" Padding="30"
-                Width="300" Effect="{DynamicResource DropShadowEffect}">
-            <Border.Background>
-                <ImageBrush/>
-            </Border.Background>
-            <StackPanel>
-                
-                <Border Width="100" Height="100" CornerRadius="50" Background="#DDDDDD" HorizontalAlignment="Center">
-                    <Image x:Name="UserProfileImage1" Stretch="UniformToFill" Visibility="Collapsed" ClipToBounds="True" />
-                </Border>
+            <Border Background="#1E1E2F" Padding="30" CornerRadius="12" Width="360">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="12" ShadowDepth="4" Opacity="0.4"/>
+                </Border.Effect>
 
-               
-                <Button x:Name="UploadButton1" Content="Upload Profile Picture" Click="UploadButton_Click"
-                        Style="{StaticResource ModernButtonStyle}" Margin="0,20,0,10"/>
+                <StackPanel>
+                    <TextBlock Text="Name" Foreground="White" Margin="0,0,0,5"/>
+                    <TextBox x:Name="NameTextBox1"
+                             Height="35" FontSize="14"
+                             Background="#2C2C3E" Foreground="White"
+                             BorderBrush="#4CAF50" BorderThickness="1"
+                             Margin="0,0,0,15" Padding="8"/>
 
-               
-                <TextBlock Text="Name" Margin="0,10,0,5" Foreground="White"/>
-                <TextBox x:Name="NameTextBox1" Height="30" Style="{StaticResource ModernTextBoxStyle}"/>
+                    <TextBlock Text="Password" Foreground="White" Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="PasswordBox1"
+                                 Height="35" FontSize="14"
+                                 Background="#2C2C3E" Foreground="White"
+                                 BorderBrush="#4CAF50" BorderThickness="1"
+                                 Margin="0,0,0,15" Padding="8"/>
 
-                
-                <TextBlock Text="Password" Margin="0,15,0,5" Foreground="White"/>
-                <PasswordBox x:Name="PasswordBox1" Height="30"/>
+                    <Button x:Name="ProceedButton1"
+                            Content="Proceed"
+                            Click="ProceedButton1_Click"
+                            Background="#4CAF50" Foreground="White"
+                            FontWeight="SemiBold" FontSize="14"
+                            Height="38" Margin="0,10,0,0" BorderThickness="0"/>
 
-                
-                <Button x:Name="ProceedButton1" Content="Proceed" Click="ProceedButton1_Click"
-                        Style="{StaticResource ModernButtonStyle}" Margin="0,25,0,0" />
-                <Button Content="Register" Click="OpenRegisterWindow_Click" Margin="0,10,0,0"/>
-
-            </StackPanel>
-        </Border>
+                    <TextBlock HorizontalAlignment="Center" Margin="0,18,0,0" FontSize="13" Foreground="White">
+                        Not registered?
+                        <Hyperlink Click="OpenRegisterWindow_Click" Foreground="#4CAF50">Register here</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
-    
 </Window>

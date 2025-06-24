@@ -1,112 +1,96 @@
 ﻿using System;
 using System.Windows;
-using System.Windows.Controls;
 using MySql.Data.MySqlClient;
+using Money_Management.Views; 
+
 
 namespace Money_Management.Views
 {
-    public partial class Profilewindow : Window
+    public partial class ProfileWindow : Window
     {
-        private string currentUsername;
-        private string connectionString = "server=localhost;user id=root;password=@12345$Sw;database=smartgoaldb";
+        private readonly string _username;
+        private readonly string connectionString = "server=localhost;user id=root;password=@12345$Sw;database=smartgoaldb";
 
-        public Profilewindow(string username)
+        public ProfileWindow(string username)
         {
             InitializeComponent();
-            currentUsername = username;
-            LoadUserProfile();
+            WindowState = WindowState.Maximized;
+            _username = username;
+            LoadUserData();
         }
 
-        private void LoadUserProfile()
+        private void LoadUserData()
         {
-            try
+            using (var connection = new MySqlConnection(connectionString))
             {
-                using (var conn = new MySqlConnection(connectionString))
+                connection.Open();
+                var query = "SELECT username, full_name, email, phone, date_registered FROM users WHERE username = @username";
+                using (var cmd = new MySqlCommand(query, connection))
                 {
-                    conn.Open();
-                    string query = "SELECT name, password FROM users WHERE name = @name";
-                    using (var cmd = new MySqlCommand(query, conn))
+                    cmd.Parameters.AddWithValue("@username", _username);
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        cmd.Parameters.AddWithValue("@name", currentUsername);
-                        using (var reader = cmd.ExecuteReader())
+                        if (reader.Read())
                         {
-                            if (reader.Read())
-                            {
-                                NameTextBox.Text = reader.GetString("name");
-                                PasswordBox.Password = reader.GetString("password");
-                            }
+                            UsernameBox.Text = reader["username"].ToString();
+                            FullNameBox.Text = reader["full_name"].ToString();
+                            EmailBox.Text = reader["email"].ToString();
+                            PhoneBox.Text = reader["phone"].ToString();
+
+                            if (reader["date_registered"] != DBNull.Value)
+                                DateRegisteredBox.Text = Convert.ToDateTime(reader["date_registered"]).ToString("yyyy-MM-dd");
                             else
-                            {
-                                MessageBox.Show("User not found.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                            }
+                                DateRegisteredBox.Text = "N/A";
                         }
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load profile: " + ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
         }
+
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            string newName = NameTextBox.Text.Trim();
-            string newPassword = PasswordBox.Password.Trim();
+            string fullName = FullNameBox.Text.Trim();
+            string email = EmailBox.Text.Trim();
+            string phone = PhoneBox.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(newName) || string.IsNullOrWhiteSpace(newPassword))
+            using (var connection = new MySqlConnection(connectionString))
             {
-                MessageBox.Show("Both name and password are required.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            try
-            {
-                using (var conn = new MySqlConnection(connectionString))
+                connection.Open();
+                var query = "UPDATE users SET full_name = @fullName, email = @email, phone = @phone WHERE username = @username";
+                using (var cmd = new MySqlCommand(query, connection))
                 {
-                    conn.Open();
-
-                    
-                    if (newName != currentUsername)
-                    {
-                        string checkQuery = "SELECT COUNT(*) FROM users WHERE name = @newName";
-                        using (var checkCmd = new MySqlCommand(checkQuery, conn))
-                        {
-                            checkCmd.Parameters.AddWithValue("@newName", newName);
-                            long exists = (long)checkCmd.ExecuteScalar();
-                            if (exists > 0)
-                            {
-                                MessageBox.Show("Username already exists. Choose a different name.");
-                                return;
-                            }
-                        }
-                    }
-
-                    string updateQuery = "UPDATE users SET name = @newName, password = @newPassword WHERE name = @currentName";
-                    using (var cmd = new MySqlCommand(updateQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@newName", newName);
-                        cmd.Parameters.AddWithValue("@newPassword", newPassword);
-                        cmd.Parameters.AddWithValue("@currentName", currentUsername);
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.Parameters.AddWithValue("@fullName", fullName);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@username", _username);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Profile updated successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-
-                MessageBox.Show("Profile updated successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                currentUsername = newName;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to update profile: " + ex.Message, "Database Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            DashboardWindow dashboard = new DashboardWindow(currentUsername);
+            DashboardWindow dashboard = new DashboardWindow(_username);
             dashboard.Show();
             this.Close();
         }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to log out?", "Confirm Logout", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                
+
+                MainWindow loginWindow = new MainWindow();
+                loginWindow.Show();
+                this.Close();
+            }
+        }
+
+
     }
 }
-

@@ -6,14 +6,29 @@
         Background="#1E1E2F" WindowStartupLocation="CenterScreen"
         ResizeMode="CanResize">
 
+    <Window.Resources>
+        <Style x:Key="IconButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="← Back" Width="100" Height="35" Margin="0,0,0,10"
-                HorizontalAlignment="Left" Click="BackButton_Click" />
+        <Button Content="← Back"
+        HorizontalAlignment="Left" VerticalAlignment="Top"
+        Width="100" Height="35"
+        Click="BackButton_Click"
+        FontSize="14" Foreground="White" Background="#4CAF50"
+        BorderBrush="White" BorderThickness="1" Padding="5" Cursor="Hand"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -21,32 +36,40 @@
                 <ColumnDefinition Width="2.7*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Left Panel -->
+            
             <StackPanel Grid.Column="0" Margin="10">
-                <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#4CAF50" Margin="0,0,0,20"/>
+                <TextBlock Text="Monthly Budget Planner" FontSize="24" FontWeight="Bold" Foreground="#4CAF50" Margin="10,10,50,20"/>
 
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                    <TextBlock Text="Month:" Foreground="White" Width="50" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Margin="20,10,0,20">
+                    <TextBlock Text="Month:" Foreground="White" Width="50" VerticalAlignment="Center" />
                     <ComboBox x:Name="MonthComboBox" Width="120" SelectionChanged="MonthYear_Changed"/>
                     <TextBlock Text="Year:" Foreground="White" Width="40" Margin="10,0,0,0" VerticalAlignment="Center"/>
                     <ComboBox x:Name="YearComboBox" Width="100" SelectionChanged="MonthYear_Changed"/>
                 </StackPanel>
 
-                <TextBlock Text="Monthly Income:" Foreground="White"/>
-                <TextBox x:Name="IncomeInput" IsReadOnly="True" Width="250" Margin="0,0,0,10"
+                <TextBlock Text="Monthly Income:" Foreground="White" Margin="50,0,0,20" />
+                <TextBox x:Name="IncomeInput" IsReadOnly="True" Width="250" Margin="10,0,0,20" Height="25"
                          Background="#EEE" Text="{Binding MonthlyIncome}"/>
 
-                <TextBlock Text="New Category:" Foreground="White"/>
-                <TextBox x:Name="CategoryNameBox" Width="250" Margin="0,0,0,5"/>
+                <TextBlock Text="Select Category:" Foreground="White" Margin="50,0,0,20"/>
+                <ComboBox x:Name="CategoryComboBox" Width="250" Margin="10,0,0,20" Height="25">
+                    <ComboBoxItem Content="Food"/>
+                    <ComboBoxItem Content="Education"/>
+                    <ComboBoxItem Content="Transport"/>
+                    <ComboBoxItem Content="Utilities"/>
+                    <ComboBoxItem Content="Entertainment"/>
+                    <ComboBoxItem Content="Health"/>
+                    <ComboBoxItem Content="Other"/>
+                </ComboBox>
 
-                <TextBlock Text="Set Limit (Rs.):" Foreground="White"/>
-                <TextBox x:Name="CategoryLimitBox" Width="250" Margin="0,0,0,10"/>
+                <TextBlock Text="Set Limit (Rs.):" Foreground="White" Margin="50,0,0,20"/>
+                <TextBox x:Name="CategoryLimitBox" Width="250" Margin="10,0,0,20" Height="25"/>
 
-                <Button Content="Add Category" Width="250" Click="AddCategory_Click"/>
-                <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="LightGreen" Margin="0,20,0,0"/>
+                <Button Content="Add Category" Width="300" Click="AddCategory_Click" Height="30"/>
+                <TextBlock x:Name="RemainingSummary" FontSize="18" FontWeight="Bold" Foreground="LightGreen" Margin="50,70,0,5"/>
             </StackPanel>
 
-            <!-- Right Panel -->
+            
             <StackPanel Grid.Column="1" Margin="10">
                 <GroupBox Header="Budget Categories" Foreground="White">
                     <DataGrid x:Name="CategoryDataGrid"
@@ -75,14 +98,29 @@
                             <DataGridTextColumn Header="Limit" Binding="{Binding Limit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="*"/>
                             <DataGridTextColumn Header="Spent" Binding="{Binding Spent}" Width="*"/>
                             <DataGridTextColumn Header="Remaining" Binding="{Binding Remaining}" Width="*"/>
+                            <DataGridTemplateColumn Header="Edit" Width="40">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="✏" Click="EditCategory_Click" Style="{StaticResource IconButtonStyle}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Delete" Width="50">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="🗑" Click="DeleteCategory_Click" Style="{StaticResource IconButtonStyle}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </GroupBox>
 
-                <GroupBox Header="Spending Distribution" Foreground="White" Height="240">
-                    <oxy:PlotView x:Name="PieChartView" Height="220" Margin="5"/>
+                <GroupBox Header="Spending Distribution" Foreground="White" Height="300">
+                    <oxy:PlotView x:Name="PieChartView" Height="250" Margin="3"/>
                 </GroupBox>
             </StackPanel>
         </Grid>
     </Grid>
 </Window>
+

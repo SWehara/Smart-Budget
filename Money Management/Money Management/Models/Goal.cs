@@ -4,7 +4,7 @@
     {
         public string Name { get; set; }
         public decimal Target { get; set; }
-        public string DueDate { get; set; }  // You can change to DateTime if needed
+        public string DueDate { get; set; }  
         public decimal Progress { get; set; }
 
         public string Status

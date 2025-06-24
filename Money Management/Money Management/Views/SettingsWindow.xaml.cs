@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Linq;
 using System.Windows;
 using System.Windows.Media;
-using Microsoft.Win32;
 using MySql.Data.MySqlClient;
-using System.Windows.Controls;
 
 namespace Money_Management.Views
 {
@@ -12,99 +9,104 @@ namespace Money_Management.Views
     {
         private string connectionString = "server=localhost;user id=root;password=@12345$Sw;database=smartgoaldb";
         private string currentUsername;
-        private string selectedImagePath = null;
 
         public SettingsWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
-            LoadUserSettings();
-        }
-
-        private void LoadUserSettings()
-        {
-            try
-            {
-                using (var conn = new MySqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT currency, profile_image_path, dark_mode FROM users WHERE name = @username";
-                    using (var cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", currentUsername);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                string currency = reader["currency"]?.ToString();
-                                bool darkMode = Convert.ToBoolean(reader["dark_mode"]);
-                                selectedImagePath = reader["profile_image_path"]?.ToString();
-
-                                
-                                if (!string.IsNullOrEmpty(currency))
-                                {
-                                    CurrencyComboBox.SelectedItem = CurrencyComboBox.Items.Cast<ComboBoxItem>()
-                                        .FirstOrDefault(item => item.Content.ToString() == currency);
-                                }
-
-                                DarkModeCheckBox.IsChecked = darkMode;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                StatusTextBlock.Text = "Error loading settings: " + ex.Message;
-                StatusTextBlock.Foreground = Brushes.Red;
-            }
         }
 
         private void SaveSettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            string currency = (CurrencyComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "LKR";
-            bool darkMode = DarkModeCheckBox.IsChecked == true;
+            string oldPwd = OldPasswordBox.Password.Trim();
+            string newPwd = NewPasswordBox.Password.Trim();
+            string confirmPwd = ConfirmPasswordBox.Password.Trim();
 
-            try
+            if (!string.IsNullOrWhiteSpace(oldPwd) || !string.IsNullOrWhiteSpace(newPwd))
             {
-                using (var conn = new MySqlConnection(connectionString))
+                if (newPwd != confirmPwd)
                 {
-                    conn.Open();
-                    string updateQuery = "UPDATE users SET currency = @currency, profile_image_path = @imagePath, dark_mode = @darkMode WHERE name = @username";
-                    using (var cmd = new MySqlCommand(updateQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@currency", currency);
-                        cmd.Parameters.AddWithValue("@imagePath", selectedImagePath ?? "");
-                        cmd.Parameters.AddWithValue("@darkMode", darkMode);
-                        cmd.Parameters.AddWithValue("@username", currentUsername);
-                        cmd.ExecuteNonQuery();
-                    }
+                    StatusTextBlock.Text = "New passwords do not match.";
+                    StatusTextBlock.Foreground = Brushes.Red;
+                    return;
                 }
 
-                StatusTextBlock.Text = "Settings saved successfully.";
-                StatusTextBlock.Foreground = Brushes.LightGreen;
-            }
-            catch (Exception ex)
-            {
-                StatusTextBlock.Text = "Error saving settings: " + ex.Message;
-                StatusTextBlock.Foreground = Brushes.Red;
+                try
+                {
+                    using (var conn = new MySqlConnection(connectionString))
+                    {
+                        conn.Open();
+
+                        string checkPwdQuery = "SELECT password FROM users WHERE name = @username";
+                        using (var checkCmd = new MySqlCommand(checkPwdQuery, conn))
+                        {
+                            checkCmd.Parameters.AddWithValue("@username", currentUsername);
+                            string currentPwd = checkCmd.ExecuteScalar()?.ToString();
+
+                            if (currentPwd != oldPwd)
+                            {
+                                StatusTextBlock.Text = "Old password is incorrect.";
+                                StatusTextBlock.Foreground = Brushes.Red;
+                                return;
+                            }
+                        }
+
+                        string updatePwdQuery = "UPDATE users SET password = @newPwd WHERE name = @username";
+                        using (var pwdCmd = new MySqlCommand(updatePwdQuery, conn))
+                        {
+                            pwdCmd.Parameters.AddWithValue("@newPwd", newPwd);
+                            pwdCmd.Parameters.AddWithValue("@username", currentUsername);
+                            pwdCmd.ExecuteNonQuery();
+                        }
+
+                        StatusTextBlock.Text = "Password updated successfully.";
+                        StatusTextBlock.Foreground = Brushes.LightGreen;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    StatusTextBlock.Text = "Error saving settings: " + ex.Message;
+                    StatusTextBlock.Foreground = Brushes.Red;
+                }
             }
         }
 
-        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        private void DeleteAccountButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog
-            {
-                Filter = "Image Files|*.jpg;*.jpeg;*.png"
-            };
+            var result = MessageBox.Show("Are you sure you want to delete your account? This cannot be undone.",
+                                         "Confirm Deletion", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-            if (dialog.ShowDialog() == true)
+            if (result == MessageBoxResult.Yes)
             {
-                selectedImagePath = dialog.FileName;
-                StatusTextBlock.Text = "Profile image selected.";
-                StatusTextBlock.Foreground = Brushes.LightGreen;
+                try
+                {
+                    using (var conn = new MySqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        string deleteQuery = "DELETE FROM users WHERE username = @username";
+                        using (var cmd = new MySqlCommand(deleteQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@username", currentUsername);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    MessageBox.Show("Account deleted successfully.", "Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    
+                    new RegisterWindow().Show();
+
+                    
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error deleting account: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
+
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

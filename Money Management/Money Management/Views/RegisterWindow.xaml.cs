@@ -9,6 +9,7 @@ namespace Money_Management.Views
         public RegisterWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
@@ -36,7 +37,7 @@ namespace Money_Management.Views
                 {
                     connection.Open();
 
-                    string checkQuery = "SELECT COUNT(*) FROM users WHERE name = @username";
+                    string checkQuery = "SELECT COUNT(*) FROM users WHERE username = @username";
                     using (var checkCmd = new MySqlCommand(checkQuery, connection))
                     {
                         checkCmd.Parameters.AddWithValue("@username", username);
@@ -48,15 +49,19 @@ namespace Money_Management.Views
                         }
                     }
 
-                    string insertQuery = "INSERT INTO users (name, password) VALUES (@username, @password)";
+                    
+                    string insertQuery = "INSERT INTO users (username, password) VALUES (@username, @password)";
                     using (var cmd = new MySqlCommand(insertQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", password); 
+                        cmd.Parameters.AddWithValue("@password", password);
+                        cmd.ExecuteNonQuery(); 
                     }
                 }
 
                 MessageBox.Show("Registration successful!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                new MainWindow().Show();
                 this.Close();
             }
             catch (Exception ex)

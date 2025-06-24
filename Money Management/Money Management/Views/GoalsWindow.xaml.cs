@@ -14,6 +14,7 @@ namespace Money_Management.Views
         public GoalsWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
             LoadGoals();
         }

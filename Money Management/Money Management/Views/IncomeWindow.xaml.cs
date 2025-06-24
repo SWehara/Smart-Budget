@@ -18,6 +18,7 @@ namespace Money_Management.Views
         public IncomeWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
             IncomeDataGrid.ItemsSource = IncomeEntries;
             LoadDefaultSources();

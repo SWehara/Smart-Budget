@@ -11,9 +11,13 @@ namespace Money_Management.Views
         public DashboardWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
             viewModel = new DashboardViewModel();
             this.DataContext = viewModel;
+
+            
+            GreetingTextBlock.Text = $"Welcome back, {currentUsername}";
         }
 
         private void IncomeButton_Click(object sender, RoutedEventArgs e)
@@ -55,14 +59,24 @@ namespace Money_Management.Views
         {
             SettingsWindow settingsWindow = new SettingsWindow(currentUsername);
             settingsWindow.Show();
+            this.Close();
         }
 
-        private void ProfileImage_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            Profilewindow profileWindow = new Profilewindow(currentUsername);
+            ProfileWindow profileWindow = new ProfileWindow(currentUsername);
             profileWindow.Show();
             this.Close();
         }
+
+
+        private void MonthReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReportsWindow reportsWindow = new ReportsWindow(currentUsername);
+            reportsWindow.Show();
+            this.Hide();
+        }
+
 
         public void UpdateIncome(double amount)
         {

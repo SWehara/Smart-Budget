@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 
 namespace Money_Management.Views
@@ -10,21 +9,7 @@ namespace Money_Management.Views
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void UploadButton_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog
-            {
-                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
-            };
-
-            if (openFileDialog.ShowDialog() == true)
-            {
-                UserProfileImage1.Source = new System.Windows.Media.Imaging.BitmapImage(new Uri(openFileDialog.FileName));
-                UserProfileImage1.Visibility = Visibility.Visible;
-                UploadButton1.Content = "Change Profile Picture";
-            }
+            WindowState = WindowState.Maximized;
         }
 
         private void ProceedButton1_Click(object sender, RoutedEventArgs e)
@@ -86,8 +71,9 @@ namespace Money_Management.Views
 
         private void OpenRegisterWindow_Click(object sender, RoutedEventArgs e)
         {
-            RegisterWindow register = new RegisterWindow();
-            register.ShowDialog();
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close();
         }
     }
 }

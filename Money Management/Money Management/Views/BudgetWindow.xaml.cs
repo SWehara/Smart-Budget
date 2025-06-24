@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using LiveCharts.Definitions.Charts;
 using Money_Management.Models;
 using MySql.Data.MySqlClient;
 using OxyPlot;
@@ -135,7 +134,7 @@ namespace Money_Management.Views
 
         private void AddCategory_Click(object sender, RoutedEventArgs e)
         {
-            string name = CategoryNameBox.Text.Trim();
+            string name = (CategoryComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
             if (!double.TryParse(CategoryLimitBox.Text, out double limit) || string.IsNullOrWhiteSpace(name))
             {
                 MessageBox.Show("Enter valid category and numeric limit.");
@@ -163,11 +162,48 @@ namespace Money_Management.Views
                 Spent = 0
             });
 
-            CategoryNameBox.Clear();
+            CategoryComboBox.SelectedIndex = -1;
             CategoryLimitBox.Clear();
 
             LoadPieChart();
             UpdateRemainingBudget();
+        }
+
+        private void EditCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is BudgetCategory category)
+            {
+                CategoryComboBox.Text = category.Name;
+                CategoryLimitBox.Text = category.Limit.ToString();
+                Categories.Remove(category);
+
+                using var conn = new MySqlConnection(connectionString);
+                conn.Open();
+                string delete = "DELETE FROM budget_categories WHERE id = @id";
+                using var cmd = new MySqlCommand(delete, conn);
+                cmd.Parameters.AddWithValue("@id", category.Id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        private void DeleteCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.DataContext is BudgetCategory category)
+            {
+                if (MessageBox.Show($"Delete category '{category.Name}'?", "Confirm", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    using var conn = new MySqlConnection(connectionString);
+                    conn.Open();
+                    string delete = "DELETE FROM budget_categories WHERE id = @id";
+                    using var cmd = new MySqlCommand(delete, conn);
+                    cmd.Parameters.AddWithValue("@id", category.Id);
+                    cmd.ExecuteNonQuery();
+
+                    Categories.Remove(category);
+                    LoadPieChart();
+                    UpdateRemainingBudget();
+                }
+            }
         }
 
         private void LoadPieChart()

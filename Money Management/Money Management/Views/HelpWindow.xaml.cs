@@ -9,6 +9,7 @@ namespace Money_Management.Views
         public HelpWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
         }
 

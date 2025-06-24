@@ -17,6 +17,7 @@ namespace Money_Management.Views
         public ExpensesWindow(string username)
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
             currentUsername = username;
             ExpensesDataGrid.ItemsSource = ExpensesList;
             LoadMonthYearFilters();
